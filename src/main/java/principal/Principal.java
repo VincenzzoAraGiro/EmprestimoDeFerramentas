@@ -1,11 +1,11 @@
 package principal;
     
-import visao.frmMenuPrincipal;
+import visao.FrmMenuPrincipal;
     
-    public class principal {
+    public class Principal {
         public static void main(String[] args) {
     // Instancia a interface gráfica
-         frmMenuPrincipal objetotela = new frmMenuPrincipal();
+         FrmMenuPrincipal objetotela = new FrmMenuPrincipal();
     // Torna a janela visível
           objetotela.setVisible(true);
         }
