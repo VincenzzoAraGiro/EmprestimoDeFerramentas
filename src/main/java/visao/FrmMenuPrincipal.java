@@ -26,7 +26,7 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         JMenuOpções = new javax.swing.JMenu();
         JMenuItemCadastoAmigo = new javax.swing.JMenuItem();
@@ -37,9 +37,18 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         JMenuItemSair = new javax.swing.JMenuItem();
         JMenuSobre = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Menu Principal");
+        setMinimumSize(new java.awt.Dimension(500, 300));
+        getContentPane().setLayout(null);
 
-        jPanel1.setLayout(null);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo2.jpg"))); // NOI18N
+        jLabel1.setMaximumSize(new java.awt.Dimension(500, 300));
+        jLabel1.setMinimumSize(new java.awt.Dimension(500, 300));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, -240, 1100, 1200);
+
+        jMenuBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         JMenuOpções.setText("Opções");
         JMenuOpções.setToolTipText("");
@@ -73,19 +82,6 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(JMenuSobre);
 
         setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 277, Short.MAX_VALUE)
-        );
-
-        jPanel1.getAccessibleContext().setAccessibleParent(jPanel1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -140,7 +136,7 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem JMenuItemSair;
     private javax.swing.JMenu JMenuOpções;
     private javax.swing.JMenu JMenuSobre;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
