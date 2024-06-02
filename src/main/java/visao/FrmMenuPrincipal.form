@@ -7,37 +7,38 @@
         <Menu class="javax.swing.JMenu" name="JMenuOp&#xe7;&#xf5;es">
           <Properties>
             <Property name="text" type="java.lang.String" value="Op&#xe7;&#xf5;es"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="JMenuCadastoAmigo">
+            <MenuItem class="javax.swing.JMenuItem" name="JMenuItemCadastoAmigo">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cadastrar Amigo"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JMenuCadastoAmigoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JMenuItemCadastoAmigoActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="JMenuCadastroFerramenta">
+            <MenuItem class="javax.swing.JMenuItem" name="JMenuItemCadastroFerramenta">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cadastrar Ferramenta"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="JMenuGerenciarEmprestimos">
+            <MenuItem class="javax.swing.JMenuItem" name="JMenuItemGerenciarEmprestimos">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Gerenciar Empr&#xe9;stimos"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="JMenuGerenciarAmigos">
+            <MenuItem class="javax.swing.JMenuItem" name="JMenuItemGerenciarAmigos">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Gerenciar Amigos"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="JMenuGerenciarFerramentas">
+            <MenuItem class="javax.swing.JMenuItem" name="JMenuItemGerenciarFerramentas">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Gerenciar Ferramentas"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="JMenuSair">
+            <MenuItem class="javax.swing.JMenuItem" name="JMenuItemSair">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Sair"/>
               </Properties>
@@ -75,13 +76,26 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Component id="jPanel1" alignment="1" pref="494" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="277" max="32767" attributes="0"/>
+          <Component id="jPanel1" alignment="1" pref="277" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleParent" type="javax.accessibility.Accessible" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="jPanel1"/>
+        </Property>
+      </AccessibilityProperties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+  </SubComponents>
 </Form>
