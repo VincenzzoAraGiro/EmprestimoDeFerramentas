@@ -26,42 +26,46 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         JMenuOpções = new javax.swing.JMenu();
-        JMenuCadastoAmigo = new javax.swing.JMenuItem();
-        JMenuCadastroFerramenta = new javax.swing.JMenuItem();
-        JMenuGerenciarEmprestimos = new javax.swing.JMenuItem();
-        JMenuGerenciarAmigos = new javax.swing.JMenuItem();
-        JMenuGerenciarFerramentas = new javax.swing.JMenuItem();
-        JMenuSair = new javax.swing.JMenuItem();
+        JMenuItemCadastoAmigo = new javax.swing.JMenuItem();
+        JMenuItemCadastroFerramenta = new javax.swing.JMenuItem();
+        JMenuItemGerenciarEmprestimos = new javax.swing.JMenuItem();
+        JMenuItemGerenciarAmigos = new javax.swing.JMenuItem();
+        JMenuItemGerenciarFerramentas = new javax.swing.JMenuItem();
+        JMenuItemSair = new javax.swing.JMenuItem();
         JMenuSobre = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        JMenuOpções.setText("Opções");
+        jPanel1.setLayout(null);
 
-        JMenuCadastoAmigo.setText("Cadastrar Amigo");
-        JMenuCadastoAmigo.addActionListener(new java.awt.event.ActionListener() {
+        JMenuOpções.setText("Opções");
+        JMenuOpções.setToolTipText("");
+
+        JMenuItemCadastoAmigo.setText("Cadastrar Amigo");
+        JMenuItemCadastoAmigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JMenuCadastoAmigoActionPerformed(evt);
+                JMenuItemCadastoAmigoActionPerformed(evt);
             }
         });
-        JMenuOpções.add(JMenuCadastoAmigo);
+        JMenuOpções.add(JMenuItemCadastoAmigo);
 
-        JMenuCadastroFerramenta.setText("Cadastrar Ferramenta");
-        JMenuOpções.add(JMenuCadastroFerramenta);
+        JMenuItemCadastroFerramenta.setText("Cadastrar Ferramenta");
+        JMenuOpções.add(JMenuItemCadastroFerramenta);
 
-        JMenuGerenciarEmprestimos.setText("Gerenciar Empréstimos");
-        JMenuOpções.add(JMenuGerenciarEmprestimos);
+        JMenuItemGerenciarEmprestimos.setText("Gerenciar Empréstimos");
+        JMenuOpções.add(JMenuItemGerenciarEmprestimos);
 
-        JMenuGerenciarAmigos.setText("Gerenciar Amigos");
-        JMenuOpções.add(JMenuGerenciarAmigos);
+        JMenuItemGerenciarAmigos.setText("Gerenciar Amigos");
+        JMenuOpções.add(JMenuItemGerenciarAmigos);
 
-        JMenuGerenciarFerramentas.setText("Gerenciar Ferramentas");
-        JMenuOpções.add(JMenuGerenciarFerramentas);
+        JMenuItemGerenciarFerramentas.setText("Gerenciar Ferramentas");
+        JMenuOpções.add(JMenuItemGerenciarFerramentas);
 
-        JMenuSair.setText("Sair");
-        JMenuOpções.add(JMenuSair);
+        JMenuItemSair.setText("Sair");
+        JMenuOpções.add(JMenuItemSair);
 
         jMenuBar1.add(JMenuOpções);
 
@@ -74,19 +78,23 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 277, Short.MAX_VALUE)
         );
+
+        jPanel1.getAccessibleContext().setAccessibleParent(jPanel1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JMenuCadastoAmigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMenuCadastoAmigoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JMenuCadastoAmigoActionPerformed
+    private void JMenuItemCadastoAmigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMenuItemCadastoAmigoActionPerformed
+        // Instancia a Tela de Cadastro de Amigos
+        FrmCadastroAmigo objeto = new FrmCadastroAmigo();
+        objeto.setVisible(true);
+    }//GEN-LAST:event_JMenuItemCadastoAmigoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,14 +132,15 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem JMenuCadastoAmigo;
-    private javax.swing.JMenuItem JMenuCadastroFerramenta;
-    private javax.swing.JMenuItem JMenuGerenciarAmigos;
-    private javax.swing.JMenuItem JMenuGerenciarEmprestimos;
-    private javax.swing.JMenuItem JMenuGerenciarFerramentas;
+    private javax.swing.JMenuItem JMenuItemCadastoAmigo;
+    private javax.swing.JMenuItem JMenuItemCadastroFerramenta;
+    private javax.swing.JMenuItem JMenuItemGerenciarAmigos;
+    private javax.swing.JMenuItem JMenuItemGerenciarEmprestimos;
+    private javax.swing.JMenuItem JMenuItemGerenciarFerramentas;
+    private javax.swing.JMenuItem JMenuItemSair;
     private javax.swing.JMenu JMenuOpções;
-    private javax.swing.JMenuItem JMenuSair;
     private javax.swing.JMenu JMenuSobre;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
