@@ -37,88 +37,78 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastro Amigos");
+        getContentPane().setLayout(null);
 
         JLabelNome.setText("Nome:");
+        getContentPane().add(JLabelNome);
+        JLabelNome.setBounds(40, 59, 36, 16);
 
         JLabelTelefone.setText("Telefone:");
+        getContentPane().add(JLabelTelefone);
+        JLabelTelefone.setBounds(40, 175, 48, 16);
 
         CadastrarAmigos.setText("Cadastrar Amigos");
+        getContentPane().add(CadastrarAmigos);
+        CadastrarAmigos.setBounds(204, 6, 107, 16);
 
         JTFTelefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTFTelefoneActionPerformed(evt);
             }
         });
+        getContentPane().add(JTFTelefone);
+        JTFTelefone.setBounds(40, 209, 255, 22);
 
         JTFNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTFNomeActionPerformed(evt);
             }
         });
+        getContentPane().add(JTFNome);
+        JTFNome.setBounds(40, 93, 255, 22);
 
         JBVoltar.setText("Voltar");
+        getContentPane().add(JBVoltar);
+        JBVoltar.setBounds(47, 279, 72, 23);
 
         JBCancelar.setText("Cancelar");
+        JBCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBCancelarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(JBCancelar);
+        JBCancelar.setBounds(209, 279, 76, 23);
 
         JBCadastrar.setText("Cadastrar");
+        getContentPane().add(JBCadastrar);
+        JBCadastrar.setBounds(377, 279, 80, 23);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(0, 145, 525, 24);
+        getContentPane().add(jSeparator2);
+        jSeparator2.setBounds(0, 249, 525, 24);
+        getContentPane().add(jSeparator3);
+        jSeparator3.setBounds(0, 29, 525, 24);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(jSeparator2)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(JBVoltar)
-                .addGap(90, 90, 90)
-                .addComponent(JBCancelar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
-                .addComponent(JBCadastrar)
-                .addGap(68, 68, 68))
-            .addComponent(jSeparator3)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JLabelTelefone)
-                            .addComponent(JTFTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JLabelNome)
-                            .addComponent(JTFNome, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(204, 204, 204)
-                        .addComponent(CadastrarAmigos, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(CadastrarAmigos)
-                .addGap(7, 7, 7)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JLabelNome)
-                .addGap(18, 18, 18)
-                .addComponent(JTFNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JLabelTelefone)
-                .addGap(18, 18, 18)
-                .addComponent(JTFTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JBVoltar)
-                    .addComponent(JBCancelar)
-                    .addComponent(JBCadastrar))
-                .addContainerGap(32, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pessoa4.jpg"))); // NOI18N
+        jLabel1.setMinimumSize(new java.awt.Dimension(500, 300));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(360, 40, 170, 320);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pessoa1.jpg"))); // NOI18N
+        jLabel2.setMinimumSize(new java.awt.Dimension(500, 300));
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(-40, 20, 500, 360);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo2.jpg"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 880, 560);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -130,6 +120,11 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
     private void JTFNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFNomeActionPerformed
+
+    private void JBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCancelarActionPerformed
+        // Libera todos os recurso da interface gráfica
+        this.dispose();
+    }//GEN-LAST:event_JBCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -175,6 +170,9 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
     private javax.swing.JLabel JLabelTelefone;
     private javax.swing.JTextField JTFNome;
     private javax.swing.JTextField JTFTelefone;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
