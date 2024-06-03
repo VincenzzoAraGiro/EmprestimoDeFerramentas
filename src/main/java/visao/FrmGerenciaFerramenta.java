@@ -39,6 +39,7 @@ public class FrmGerenciaFerramenta extends javax.swing.JFrame {
         JTFCusto = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(483, 380));
 
         JTableFerramentas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
