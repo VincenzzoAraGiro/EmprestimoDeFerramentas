@@ -43,19 +43,23 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro Amigos");
+        setMinimumSize(new java.awt.Dimension(483, 380));
         getContentPane().setLayout(null);
 
+        JLabelNome.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JLabelNome.setText("Nome:");
         getContentPane().add(JLabelNome);
-        JLabelNome.setBounds(40, 59, 36, 16);
+        JLabelNome.setBounds(40, 59, 50, 20);
 
+        JLabelTelefone.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JLabelTelefone.setText("Telefone:");
         getContentPane().add(JLabelTelefone);
-        JLabelTelefone.setBounds(40, 175, 48, 16);
+        JLabelTelefone.setBounds(40, 175, 70, 20);
 
+        CadastrarAmigos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         CadastrarAmigos.setText("Cadastrar Amigos");
         getContentPane().add(CadastrarAmigos);
-        CadastrarAmigos.setBounds(204, 6, 107, 16);
+        CadastrarAmigos.setBounds(170, 0, 160, 25);
 
         JTFTelefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,8 +79,9 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
 
         JBVoltar.setText("Voltar");
         getContentPane().add(JBVoltar);
-        JBVoltar.setBounds(47, 279, 72, 23);
+        JBVoltar.setBounds(47, 279, 61, 22);
 
+        JBCancelar.setBackground(new java.awt.Color(255, 91, 91));
         JBCancelar.setText("Cancelar");
         JBCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,11 +89,12 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JBCancelar);
-        JBCancelar.setBounds(209, 279, 76, 23);
+        JBCancelar.setBounds(209, 279, 76, 22);
 
+        JBCadastrar.setBackground(new java.awt.Color(139, 253, 139));
         JBCadastrar.setText("Cadastrar");
         getContentPane().add(JBCadastrar);
-        JBCadastrar.setBounds(377, 279, 80, 23);
+        JBCadastrar.setBounds(377, 279, 80, 22);
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(0, 145, 525, 24);
         getContentPane().add(jSeparator2);
@@ -99,12 +105,12 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pessoa4.jpg"))); // NOI18N
         jLabel1.setMinimumSize(new java.awt.Dimension(500, 300));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(360, 40, 170, 320);
+        jLabel1.setBounds(320, 20, 170, 320);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pessoa1.jpg"))); // NOI18N
         jLabel2.setMinimumSize(new java.awt.Dimension(500, 300));
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-40, 20, 500, 360);
+        jLabel2.setBounds(-10, 20, 500, 360);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo2.jpg"))); // NOI18N
         getContentPane().add(jLabel3);
