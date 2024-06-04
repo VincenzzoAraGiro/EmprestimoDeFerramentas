@@ -35,11 +35,11 @@ public class FrmSobre extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Nosso sistema de registro de empréstimo de ferramentas, desenvolvido por");
+        jLabel1.setText("Nosso sistema de registro de empréstimo de ferramentas, desenvolvido pelos");
 
-        jLabel2.setText("Leonardo Ceregatti Benck e Vincenzzo Aravechia Giro, é uma aplicação em");
+        jLabel2.setText("integrantes Leonardo Ceregatti Benck e Vincenzzo Aravechia Giro, é uma aplicação");
 
-        jLabel3.setText("Java para simplificar o controle de empréstimos de ferramentas pessoais entre");
+        jLabel3.setText("em Java para simplificar o controle de empréstimos de ferramentas pessoais entre");
 
         jLabel4.setText("amigos e conhecidos. Este sistema intuitivo e eficaz rastreia adequadamente as");
 
@@ -54,7 +54,7 @@ public class FrmSobre extends javax.swing.JFrame {
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE)
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );

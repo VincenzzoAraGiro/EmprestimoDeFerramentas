@@ -26,7 +26,7 @@
           <Component id="jLabel1" max="32767" attributes="0"/>
           <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
           <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
-          <Component id="jLabel4" alignment="0" pref="422" max="32767" attributes="0"/>
+          <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
           <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
           <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
       </Group>
@@ -54,17 +54,17 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Nosso sistema de registro de empr&#xe9;stimo de ferramentas, desenvolvido por"/>
+        <Property name="text" type="java.lang.String" value="Nosso sistema de registro de empr&#xe9;stimo de ferramentas, desenvolvido pelos"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Leonardo Ceregatti Benck e Vincenzzo Aravechia Giro, &#xe9; uma aplica&#xe7;&#xe3;o em"/>
+        <Property name="text" type="java.lang.String" value="integrantes Leonardo Ceregatti Benck e Vincenzzo Aravechia Giro, &#xe9; uma aplica&#xe7;&#xe3;o"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Java para simplificar o controle de empr&#xe9;stimos de ferramentas pessoais entre"/>
+        <Property name="text" type="java.lang.String" value="em Java para simplificar o controle de empr&#xe9;stimos de ferramentas pessoais entre"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
