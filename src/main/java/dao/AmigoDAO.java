@@ -1,132 +1,81 @@
 package dao;
 
 import modelo.Amigo;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 
 public class AmigoDAO {
+    private static final String INSERT_AMIGO_SQL = "INSERT INTO amigos (id, nome, telefone) VALUES (?, ?, ?)";
+    private static final String SELECT_ALL_AMIGOS_SQL = "SELECT * FROM amigos";
+    private static final String UPDATE_AMIGO_SQL = "UPDATE amigos SET nome = ?, telefone = ? WHERE id = ?";
+    private static final String DELETE_AMIGO_SQL = "DELETE FROM amigos WHERE id = ?";
+    private static final String SELECT_AMIGO_BY_ID_SQL = "SELECT * FROM amigos WHERE id = ?";
+    private static final String MAX_ID_SQL = "SELECT MAX(id) AS max_id FROM amigos";
 
-    public static ArrayList<Amigo> MinhaLista = new ArrayList<>();
-
-    public AmigoDAO() {
+    public static void adicionarAmigo(Amigo amigo) throws SQLException {
+        try (Connection conn = ConexaoDB.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(INSERT_AMIGO_SQL)) {
+            pstmt.setInt(1, amigo.getId());
+            pstmt.setString(2, amigo.getNome());
+            pstmt.setString(3, amigo.getTelefone());
+            pstmt.executeUpdate();
+        }
     }
 
-    //esse metodo serve para pegar o maior e ultimo id cadastrado no banco
-    public int pegaMaiorID() throws SQLException {
-        int maior = 0;
-        try {
-            Connection conexaoBD = Connection.getConexaoBD();
-            if (conexaoBD != null) {
-                try (Statement stmt = conexaoBD.createStatement()) {
-                    ResultSet res = stmt.executeQuery("SELECT MAX(id_amigo) id_amigo FROM amigos");
-                    res.next();
-                    maior = res.getInt("id_amigo");
-                }
+    public static ArrayList<Amigo> getMinhaLista() throws SQLException {
+        ArrayList<Amigo> amigos = new ArrayList<>();
+        try (Connection conn = ConexaoDB.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(SELECT_ALL_AMIGOS_SQL);
+             ResultSet rs = pstmt.executeQuery()) {
+            while (rs.next()) {
+                Amigo amigo = new Amigo(rs.getInt("id"), rs.getString("nome"), rs.getString("telefone"));
+                amigos.add(amigo);
             }
-        } catch (SQLException ex) {
         }
-        return maior;
+        return amigos;
     }
 
-    public ArrayList getMinhaLista() {
-        MinhaLista.clear();
-        //imporatnte limpar a lista antes de dar um get pq caso tenhamos dado um 
-        //insert/update novo no banco atualizamos ela certinho
-        try {
-            Connection conexaoBD = Connection.getConexaoBD();
-            if (conexaoBD != null) {
-                Statement conecaox = conexaoBD.createStatement();
-                ResultSet resposta = conecaox.executeQuery("SELECT * FROM amigos");
-                while (resposta.next()) {
-                    int id = resposta.getInt("id_amigo");
-                    String nome = resposta.getString("nome");
-                    String telefone = resposta.getString("telefone");
-
-                    Amigo objeto = new Amigo(id, nome, telefone);
-                    MinhaLista.add(objeto);
-                }
-                conecaox.close();
-            }
-
-        } catch (SQLException ex) {
-            //caso de erro
+    public static void atualizarAmigo(Amigo amigo) throws SQLException {
+        try (Connection conn = ConexaoDB.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(UPDATE_AMIGO_SQL)) {
+            pstmt.setString(1, amigo.getNome());
+            pstmt.setString(2, amigo.getTelefone());
+            pstmt.setInt(3, amigo.getId());
+            pstmt.executeUpdate();
         }
-        return MinhaLista;
     }
 
-    public boolean inserirAmigoBD(Amigo objeto) {
-        String sql = "INSERT INTO amigos(nome, telefone) VALUES(?, ?)";
-        try {
-            Connection conexaoBD = Connection.getConexaoBD();
-            if (conexaoBD != null) {
-                try (PreparedStatement stmt = conexaoBD.prepareStatement(sql)) {
-                    stmt.setString(1, objeto.getNome());
-                    stmt.setString(2, objeto.getTelefone());
-                    stmt.execute();
-                }
-                return true;
-            }
-        } catch (SQLException erro) {
-            throw new RuntimeException(erro);
+    public static void deletarAmigo(int id) throws SQLException {
+        try (Connection conn = ConexaoDB.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(DELETE_AMIGO_SQL)) {
+            pstmt.setInt(1, id);
+            pstmt.executeUpdate();
         }
-        return false;
     }
 
-    public boolean deletaAmigoBD(int id) {
-        try {
-            Connection conexaoBD = Connection.getConexaoBD();
-            if (conexaoBD != null) {
-                try (Statement stmt = conexaoBD.createStatement()) {
-                    stmt.executeUpdate("DELETE FROM amigos WHERE id_amigo = " + id);
-                    stmt.close();
+    public static Amigo buscarAmigoPorId(int id) throws SQLException {
+        Amigo amigo = null;
+        try (Connection conn = ConexaoDB.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(SELECT_AMIGO_BY_ID_SQL)) {
+            pstmt.setInt(1, id);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    amigo = new Amigo(rs.getInt("id"), rs.getString("nome"), rs.getString("telefone"));
                 }
             }
-        } catch (SQLException erro) {
         }
-        return true;
+        return amigo;
     }
 
-    public boolean atualizarAmigo(Amigo objeto) {
-        String sintaxe = "UPDATE amigos SET nome = ?, telefone = ? WHERE id_amigo = ?";
-        try {
-            Connection conexaoBD = Connection.getConexaoBD();
-            if (conexaoBD != null) {
-                try (PreparedStatement stmt = conexaoBD.prepareStatement(sintaxe)) {
-                    stmt.setString(1, objeto.getNome());
-                    stmt.setString(2, objeto.getTelefone());
-                    stmt.setInt(3, objeto.getId());
-                    int linhasAfetadas = stmt.executeUpdate();
-                    return linhasAfetadas > 0;
-                }
+    public static int maiorID() throws SQLException {
+        int maxId = 0;
+        try (Connection conn = ConexaoDB.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(MAX_ID_SQL);
+             ResultSet rs = pstmt.executeQuery()) {
+            if (rs.next()) {
+                maxId = rs.getInt("max_id");
             }
-        } catch (SQLException erro) {
-            throw new RuntimeException(erro);
         }
-        return false;
-    }
-
-    public Amigo carregaAmigo(int id) {
-        Amigo objeto = new Amigo(); //cria o objeto
-        objeto.setId(id); //seta o id recebido por parametro para o objeto
-        try {
-            Connection conexaoBD = Connection.getConexaoBD();
-            if (conexaoBD != null) {
-                try (Statement stmt = conexaoBD.createStatement()) {
-                    //executa nossa query
-                    ResultSet resposta = stmt.executeQuery("SELECT * FROM amigos WHERE id_amigo = " + id);
-                    resposta.next();
-                    objeto.setNome(resposta.getString("nome"));
-                    objeto.setTelefone(resposta.getString("telefone"));
-                }
-            }
-        } catch (SQLException erro) {
-              throw new RuntimeException(erro);
-        }
-        return objeto;
+        return maxId;
     }
 }

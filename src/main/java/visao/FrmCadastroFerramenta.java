@@ -84,7 +84,7 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JBCancelar);
-        JBCancelar.setBounds(40, 330, 61, 22);
+        JBCancelar.setBounds(40, 330, 72, 23);
 
         JBCadastrar.setBackground(new java.awt.Color(139, 253, 139));
         JBCadastrar.setText("Cadastrar");
@@ -94,7 +94,7 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JBCadastrar);
-        JBCadastrar.setBounds(370, 330, 80, 22);
+        JBCadastrar.setBounds(370, 330, 80, 23);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Cadastro de Ferramentas");
@@ -111,7 +111,7 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JBCancelar1);
-        JBCancelar1.setBounds(200, 330, 68, 22);
+        JBCancelar1.setBounds(200, 330, 72, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
