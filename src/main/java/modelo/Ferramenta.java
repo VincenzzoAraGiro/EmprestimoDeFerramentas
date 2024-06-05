@@ -1,96 +1,53 @@
 package modelo;
 
-import java.util.ArrayList;
-import dao.FerramentaDAO;
-
-public class Ferramenta extends Amigo{
-    
+public class Ferramenta {
     private int id;
     private String nome;
     private String marca;
-    private int custo;
-    
-    // Construtor de Objeto Vazio
-    public Ferramenta(){
-        this(0,"","",0);
-    }
-    
-    // Construtor com parâmetro
-    public Ferramenta(int id, String nome, String marca, int custo){
+    private double custoAquisicao;
+
+    public Ferramenta(int id, String nome, String marca, double custoAquisicao) {
         this.id = id;
         this.nome = nome;
         this.marca = marca;
-        this.custo = custo;
+        this.custoAquisicao = custoAquisicao;
     }
-    
-    // Métodos GET e SET
-    public int getId(){
+
+    // Getters e Setters
+    public int getId() {
         return id;
     }
-    
-    public void setId(int id){
+
+    public void setId(int id) {
         this.id = id;
     }
-    
-    public int getCusto(){
-        return custo;
+
+    public String getNome() {
+        return nome;
     }
-    
-    public void setCusto(int custo){
-        this.custo = custo;
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
-    
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public double getCustoAquisicao() {
+        return custoAquisicao;
+    }
+
+    public void setCustoAquisicao(double custoAquisicao) {
+        this.custoAquisicao = custoAquisicao;
+    }
+
     @Override
-    public String toString(){
-        return super.toString() + "nome=" + nome + ",marca=" + marca;
-    }
-    
-    /* ABAIXO OS MÉTODOS PARA USO JUNTO COM O DAO SIMULANDO A ESTRUTURA EM 
-    CAMADAS PARA USAR COM BANCOS DE DADOS. */
-    // Retorna a lista de Alunos(objetos)
-    public ArrayList<Ferramenta> getMinhaLista() {
-        return FerramentaDAO.getMinhaLista();
-    }
-   
-    // Cadastra novo aluno
-    public boolean insertFerramentaBD(int id, String nome, String marca, int custo) {
-        int id = this.maiorID() + 1;
-        Ferramenta objeto = new Ferramenta(id, nome, marca, custo);
-        getMinhaLista().add(objeto);
-    return true;
-    }
-    
-    // Deleta um aluno específico pelo seu campo ID
-    public boolean deleteAmigoBD(int id){
-        int indice = this.procuraIndice(id);
-        getMinhaLista().remove(indice);
-        return true;
-    }
-    
-    // Edita um aluno específico pelo seu campo ID
-    public boolean updateAmigoBD(int id, String nome, String marca, int custo){
-        Ferramenta objeto = new Ferramenta(id, nome, marca, custo);
-        int indice = this.procuraIndice(id);
-        getMinhaLista().set(indice, objeto);
-        return true;
-    }
-    // Procura o INDICE de objeto da minhaLista que contem o ID enviado
-    private int procuraIndice(int id) {
-        int indice = -1;
-        for (int i = 0; i < getMinhaLista().size(); i++) {
-        if (getMinhaLista().get(i).getId() == id) {
-            indice = i;
-        }
-    }
-return indice;
-}
-    // Carrega dados de um amigo especifico pelo seu ID
-    public Ferramenta carregaAmigo(int id){
-        int indice = this.procuraIndice(id);
-        return getMinhaLista().get(indice);
-    }
-    // Retorna o maior ID da nossa base de dados
-    public int maiorID(){
-        return FerramentaDAO.maiorID();
+    public String toString() {
+        return "Ferramenta{id=" + id + ", nome=" + nome + ", marca=" + marca + ", custoAquisicao=" + custoAquisicao + '}';
     }
 }
