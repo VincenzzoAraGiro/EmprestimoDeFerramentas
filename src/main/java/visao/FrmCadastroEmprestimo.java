@@ -33,76 +33,55 @@ public class FrmCadastroEmprestimo extends javax.swing.JFrame {
         JBCadastrar = new javax.swing.JButton();
         JTFNome = new javax.swing.JTextField();
         JTFFerramentas = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastro de Empréstimos");
+        setMinimumSize(new java.awt.Dimension(483, 380));
+        getContentPane().setLayout(null);
 
         jLabel1.setText("Nome");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(16, 80, 33, 16);
 
-        jLabel2.setText("Data de Empréstimo");
+        jLabel2.setText("Data de Empréstimo:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(320, 30, 120, 16);
 
         jLabel3.setText("Ferramentas");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(16, 183, 65, 16);
 
+        JBCancelar.setBackground(new java.awt.Color(255, 102, 102));
+        JBCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JBCancelar.setText("Cancelar");
         JBCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBCancelarActionPerformed(evt);
             }
         });
+        getContentPane().add(JBCancelar);
+        JBCancelar.setBounds(80, 270, 100, 27);
 
+        JBCadastrar.setBackground(new java.awt.Color(102, 255, 102));
+        JBCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JBCadastrar.setText("Cadastrar");
+        getContentPane().add(JBCadastrar);
+        JBCadastrar.setBounds(320, 270, 110, 27);
 
         JTFNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTFNomeActionPerformed(evt);
             }
         });
+        getContentPane().add(JTFNome);
+        JTFNome.setBounds(16, 102, 200, 22);
+        getContentPane().add(JTFFerramentas);
+        JTFFerramentas.setBounds(16, 205, 206, 22);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(JTFFerramentas, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JTFNome, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(81, 81, 81)
-                                .addComponent(JBCancelar)
-                                .addGap(56, 56, 56)
-                                .addComponent(JBCadastrar)))
-                        .addContainerGap(91, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2)
-                        .addGap(31, 31, 31))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JTFNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JTFFerramentas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JBCancelar)
-                    .addComponent(JBCadastrar))
-                .addGap(16, 16, 16))
-        );
+        jLabel4.setText("Data de Devolução:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(320, 120, 110, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -112,7 +91,7 @@ public class FrmCadastroEmprestimo extends javax.swing.JFrame {
     }//GEN-LAST:event_JTFNomeActionPerformed
 
     private void JBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCancelarActionPerformed
-        // TODO add your handling code here:
+        (this).setVisible(false);
     }//GEN-LAST:event_JBCancelarActionPerformed
 
     /**
@@ -158,5 +137,6 @@ public class FrmCadastroEmprestimo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

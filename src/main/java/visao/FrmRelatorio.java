@@ -32,11 +32,10 @@ public class FrmRelatorio extends javax.swing.JFrame {
         TabelaRelatorios = new javax.swing.JTable();
         jSeparator1 = new javax.swing.JSeparator();
         Voltar = new javax.swing.JButton();
-        Fundo = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Fast Ferramentas - Relatórios");
-        setMinimumSize(new java.awt.Dimension(483, 350));
+        setMinimumSize(new java.awt.Dimension(483, 380));
         getContentPane().setLayout(null);
 
         FastFerramentasApp.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -83,12 +82,6 @@ public class FrmRelatorio extends javax.swing.JFrame {
         });
         getContentPane().add(Voltar);
         Voltar.setBounds(0, 0, 260, 50);
-
-        Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo5.jpg"))); // NOI18N
-        Fundo.setMaximumSize(new java.awt.Dimension(483, 350));
-        Fundo.setMinimumSize(new java.awt.Dimension(483, 350));
-        getContentPane().add(Fundo);
-        Fundo.setBounds(-150, -150, 670, 500);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -137,7 +130,6 @@ public class FrmRelatorio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DescriçãoTela;
     private javax.swing.JLabel FastFerramentasApp;
-    private javax.swing.JLabel Fundo;
     private javax.swing.JTable TabelaRelatorios;
     private javax.swing.JButton Voltar;
     private javax.swing.JScrollPane jScrollPane1;

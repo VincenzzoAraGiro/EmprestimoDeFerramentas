@@ -32,17 +32,13 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
         JTFTelefone = new javax.swing.JTextField();
         JTFNome = new javax.swing.JTextField();
         JBVoltar = new javax.swing.JButton();
-        JBCancelar = new javax.swing.JButton();
         JBCadastrar = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cadastro Amigos");
+        setTitle("Fast Ferramentas - Cadastro de Amigos");
         setMinimumSize(new java.awt.Dimension(483, 380));
         getContentPane().setLayout(null);
 
@@ -77,44 +73,28 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
         getContentPane().add(JTFNome);
         JTFNome.setBounds(40, 93, 255, 22);
 
+        JBVoltar.setBackground(new java.awt.Color(255, 102, 102));
+        JBVoltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JBVoltar.setText("Voltar");
-        getContentPane().add(JBVoltar);
-        JBVoltar.setBounds(47, 279, 61, 22);
-
-        JBCancelar.setBackground(new java.awt.Color(255, 91, 91));
-        JBCancelar.setText("Cancelar");
-        JBCancelar.addActionListener(new java.awt.event.ActionListener() {
+        JBVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBCancelarActionPerformed(evt);
+                JBVoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(JBCancelar);
-        JBCancelar.setBounds(209, 279, 76, 22);
+        getContentPane().add(JBVoltar);
+        JBVoltar.setBounds(60, 270, 100, 27);
 
         JBCadastrar.setBackground(new java.awt.Color(139, 253, 139));
+        JBCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JBCadastrar.setText("Cadastrar");
         getContentPane().add(JBCadastrar);
-        JBCadastrar.setBounds(377, 279, 80, 22);
+        JBCadastrar.setBounds(330, 270, 110, 27);
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(0, 145, 525, 24);
         getContentPane().add(jSeparator2);
         jSeparator2.setBounds(0, 249, 525, 24);
         getContentPane().add(jSeparator3);
         jSeparator3.setBounds(0, 29, 525, 24);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pessoa4.jpg"))); // NOI18N
-        jLabel1.setMinimumSize(new java.awt.Dimension(500, 300));
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(320, 20, 170, 320);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pessoa1.jpg"))); // NOI18N
-        jLabel2.setMinimumSize(new java.awt.Dimension(500, 300));
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(-10, 20, 500, 360);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo2.jpg"))); // NOI18N
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 0, 880, 560);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -127,10 +107,9 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFNomeActionPerformed
 
-    private void JBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCancelarActionPerformed
-        // Libera todos os recurso da interface gráfica
-        this.dispose();
-    }//GEN-LAST:event_JBCancelarActionPerformed
+    private void JBVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBVoltarActionPerformed
+        (this).setVisible(false);
+    }//GEN-LAST:event_JBVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,15 +149,11 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CadastrarAmigos;
     private javax.swing.JButton JBCadastrar;
-    private javax.swing.JButton JBCancelar;
     private javax.swing.JButton JBVoltar;
     private javax.swing.JLabel JLabelNome;
     private javax.swing.JLabel JLabelTelefone;
     private javax.swing.JTextField JTFNome;
     private javax.swing.JTextField JTFTelefone;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;

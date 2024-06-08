@@ -38,8 +38,11 @@ public class FrmGerenciaFerramenta extends javax.swing.JFrame {
         JTFMarca = new javax.swing.JTextField();
         JTFCusto = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Gerenciamento de Ferramentas");
         setMinimumSize(new java.awt.Dimension(483, 380));
+        setPreferredSize(new java.awt.Dimension(483, 380));
+        getContentPane().setLayout(null);
 
         JTableFerramentas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -65,80 +68,38 @@ public class FrmGerenciaFerramenta extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(JTableFerramentas);
 
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(6, 6, 470, 99);
+
         jLabel1.setText("Nome");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(10, 130, 33, 16);
 
         jLabel2.setText("Marca");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(10, 190, 33, 16);
 
         jLabel3.setText("Custo");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(340, 120, 31, 16);
 
         JBCancelar.setText("Cancelar");
+        getContentPane().add(JBCancelar);
+        JBCancelar.setBounds(47, 259, 76, 23);
 
         JBApagar.setText("Apagar");
+        getContentPane().add(JBApagar);
+        JBApagar.setBounds(168, 259, 72, 23);
 
         JBAlterar.setText("Alterar");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(JBCancelar)
-                        .addGap(45, 45, 45)
-                        .addComponent(JBApagar)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(JBAlterar)
-                                .addGap(37, 37, 37))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(88, 88, 88))))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(164, 164, 164)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(JTFNome, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(JTFMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(JTFCusto, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JTFNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTFMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JTFCusto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JBCancelar)
-                    .addComponent(JBApagar)
-                    .addComponent(JBAlterar))
-                .addGap(18, 18, 18))
-        );
+        getContentPane().add(JBAlterar);
+        JBAlterar.setBounds(328, 259, 72, 23);
+        getContentPane().add(JTFNome);
+        JTFNome.setBounds(6, 148, 290, 22);
+        getContentPane().add(JTFMarca);
+        JTFMarca.setBounds(6, 210, 290, 22);
+        getContentPane().add(JTFCusto);
+        JTFCusto.setBounds(340, 140, 130, 22);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -51,17 +51,28 @@ public class FrmGerenciaAmigo extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Gerenciamento de Amigos");
+        setMinimumSize(new java.awt.Dimension(483, 380));
+        getContentPane().setLayout(null);
 
         jLabel1.setText("Nome");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(24, 141, 33, 16);
 
         jLabel2.setText("Telefone");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(24, 213, 45, 16);
+        getContentPane().add(JTFNome);
+        JTFNome.setBounds(24, 163, 344, 22);
 
         JTFTelefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTFTelefoneActionPerformed(evt);
             }
         });
+        getContentPane().add(JTFTelefone);
+        JTFTelefone.setBounds(24, 235, 338, 22);
 
         JTableAmigos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -88,12 +99,17 @@ public class FrmGerenciaAmigo extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(JTableAmigos);
 
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(6, 6, 457, 117);
+
         JBCancelar.setText("Cancelar");
         JBCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBCancelarActionPerformed(evt);
             }
         });
+        getContentPane().add(JBCancelar);
+        JBCancelar.setBounds(34, 275, 76, 23);
 
         JBApagar.setText("Apagar");
         JBApagar.addActionListener(new java.awt.event.ActionListener() {
@@ -101,57 +117,12 @@ public class FrmGerenciaAmigo extends javax.swing.JFrame {
                 JBApagarActionPerformed(evt);
             }
         });
+        getContentPane().add(JBApagar);
+        JBApagar.setBounds(197, 275, 72, 23);
 
         JBAlterar.setText("Alterar");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(JBCancelar)
-                        .addGap(87, 87, 87)
-                        .addComponent(JBApagar)
-                        .addGap(93, 93, 93)
-                        .addComponent(JBAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1)
-                            .addComponent(JTFNome, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JTFTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(95, 95, 95)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JTFNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JTFTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JBAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(JBCancelar)
-                        .addComponent(JBApagar)))
-                .addGap(17, 17, 17))
-        );
+        getContentPane().add(JBAlterar);
+        JBAlterar.setBounds(362, 275, 74, 22);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -161,7 +132,7 @@ public class FrmGerenciaAmigo extends javax.swing.JFrame {
     }//GEN-LAST:event_JTFTelefoneActionPerformed
 
     private void JBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCancelarActionPerformed
-        // TODO add your handling code here:
+        (this).setVisible(false);
     }//GEN-LAST:event_JBCancelarActionPerformed
 
     private void JBApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBApagarActionPerformed

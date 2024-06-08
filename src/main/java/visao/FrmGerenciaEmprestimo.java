@@ -37,7 +37,10 @@ public class FrmGerenciaEmprestimo extends javax.swing.JFrame {
         JBCancelar = new javax.swing.JButton();
         JBAtualizar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Gerenciamento de Empréstimos");
+        setMinimumSize(new java.awt.Dimension(522, 380));
+        getContentPane().setLayout(null);
 
         JTableEmprestimos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -49,19 +52,34 @@ public class FrmGerenciaEmprestimo extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(JTableEmprestimos);
 
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(6, 6, 509, 98);
+
         jLabel1.setText("Ferramentas");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(28, 140, 65, 16);
 
         jLabel2.setText("Nome");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(28, 215, 33, 16);
 
         jLabel3.setText("Data de Devolução");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(337, 140, 99, 16);
 
         jLabel4.setText("Data do Empréstimo");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(337, 215, 108, 16);
+        getContentPane().add(JTFFerramentas);
+        JTFFerramentas.setBounds(28, 162, 258, 22);
 
         JTFNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTFNomeActionPerformed(evt);
             }
         });
+        getContentPane().add(JTFNome);
+        JTFNome.setBounds(28, 237, 260, 22);
 
         JBCancelar.setText("Cancelar");
         JBCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -69,63 +87,12 @@ public class FrmGerenciaEmprestimo extends javax.swing.JFrame {
                 JBCancelarActionPerformed(evt);
             }
         });
+        getContentPane().add(JBCancelar);
+        JBCancelar.setBounds(139, 304, 76, 23);
 
         JBAtualizar.setText("Atualizar");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addGap(76, 76, 76))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(139, 139, 139)
-                        .addComponent(JBCancelar)
-                        .addGap(93, 93, 93)
-                        .addComponent(JBAtualizar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(JTFFerramentas, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JTFNome, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JTFFerramentas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JTFNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JBCancelar)
-                    .addComponent(JBAtualizar))
-                .addGap(14, 14, 14))
-        );
+        getContentPane().add(JBAtualizar);
+        JBAtualizar.setBounds(308, 304, 76, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -135,7 +102,7 @@ public class FrmGerenciaEmprestimo extends javax.swing.JFrame {
     }//GEN-LAST:event_JTFNomeActionPerformed
 
     private void JBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCancelarActionPerformed
-        // TODO add your handling code here:
+        (this).setVisible(false);
     }//GEN-LAST:event_JBCancelarActionPerformed
 
     /**
