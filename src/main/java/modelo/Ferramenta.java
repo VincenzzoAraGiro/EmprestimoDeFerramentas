@@ -13,6 +13,10 @@ public class Ferramenta {
         this.custoAquisicao = custoAquisicao;
     }
 
+    public Ferramenta() {
+        throw new UnsupportedOperationException("Não suportado."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     // Getters e Setters
     public int getId() {
         return id;

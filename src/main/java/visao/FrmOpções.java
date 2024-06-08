@@ -38,11 +38,10 @@ public class FrmOpções extends javax.swing.JFrame {
         Sobre = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         Voltar = new javax.swing.JButton();
-        Fundo = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Fast Ferramentas - Menu Inicial");
-        setMinimumSize(new java.awt.Dimension(483, 350));
+        setMinimumSize(new java.awt.Dimension(483, 380));
         getContentPane().setLayout(null);
 
         NomeApp.setBackground(new java.awt.Color(0, 0, 0));
@@ -52,7 +51,7 @@ public class FrmOpções extends javax.swing.JFrame {
         NomeApp.setBounds(0, 0, 240, 38);
 
         SubTitulo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        SubTitulo.setText("O aplicativo feito pra você!");
+        SubTitulo.setText("Opções");
         getContentPane().add(SubTitulo);
         SubTitulo.setBounds(0, 30, 210, 20);
 
@@ -63,7 +62,7 @@ public class FrmOpções extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CadastrarFerramenta);
-        CadastrarFerramenta.setBounds(66, 147, 152, 23);
+        CadastrarFerramenta.setBounds(70, 110, 152, 23);
 
         VerFerramentas.setText("Ver Ferramentas");
         VerFerramentas.addActionListener(new java.awt.event.ActionListener() {
@@ -72,7 +71,7 @@ public class FrmOpções extends javax.swing.JFrame {
             }
         });
         getContentPane().add(VerFerramentas);
-        VerFerramentas.setBounds(265, 147, 152, 23);
+        VerFerramentas.setBounds(270, 110, 152, 23);
 
         VerAmigos.setText("Ver Amigos");
         VerAmigos.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +80,7 @@ public class FrmOpções extends javax.swing.JFrame {
             }
         });
         getContentPane().add(VerAmigos);
-        VerAmigos.setBounds(265, 188, 152, 23);
+        VerAmigos.setBounds(270, 150, 152, 23);
 
         CadastrarAmigo.setText("Cadastrar Amigo");
         CadastrarAmigo.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +89,7 @@ public class FrmOpções extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CadastrarAmigo);
-        CadastrarAmigo.setBounds(66, 188, 152, 23);
+        CadastrarAmigo.setBounds(70, 150, 152, 23);
 
         CadastrarEmprestimo.setText("Cadastrar Empréstimo");
         CadastrarEmprestimo.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +98,7 @@ public class FrmOpções extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CadastrarEmprestimo);
-        CadastrarEmprestimo.setBounds(66, 229, 152, 23);
+        CadastrarEmprestimo.setBounds(70, 200, 152, 23);
 
         Emprestimos.setText("Ver Empréstimos");
         Emprestimos.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +107,7 @@ public class FrmOpções extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Emprestimos);
-        Emprestimos.setBounds(265, 229, 152, 23);
+        Emprestimos.setBounds(270, 200, 152, 23);
 
         Relatorio.setText("Relatório");
         Relatorio.addActionListener(new java.awt.event.ActionListener() {
@@ -117,7 +116,7 @@ public class FrmOpções extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Relatorio);
-        Relatorio.setBounds(66, 270, 152, 23);
+        Relatorio.setBounds(70, 240, 152, 23);
 
         Sobre.setText("Sobre");
         Sobre.addActionListener(new java.awt.event.ActionListener() {
@@ -126,10 +125,13 @@ public class FrmOpções extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Sobre);
-        Sobre.setBounds(265, 270, 152, 23);
+        Sobre.setBounds(270, 240, 152, 23);
         getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(0, 86, 483, 10);
+        jSeparator1.setBounds(0, 50, 483, 10);
 
+        Voltar.setBackground(new java.awt.Color(255, 102, 102));
+        Voltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Voltar.setText("Voltar");
         Voltar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,11 +139,7 @@ public class FrmOpções extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Voltar);
-        Voltar.setBounds(0, 0, 230, 60);
-
-        Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo4.jpg"))); // NOI18N
-        getContentPane().add(Fundo);
-        Fundo.setBounds(0, -230, 980, 1140);
+        Voltar.setBounds(200, 290, 80, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -196,8 +194,7 @@ public class FrmOpções extends javax.swing.JFrame {
 
     private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
         // Volta para o menu inicial
-        FrmMenuPrincipal objeto = new FrmMenuPrincipal();
-        objeto.setVisible(true);
+        (this).setVisible(false);
     }//GEN-LAST:event_VoltarActionPerformed
 
     /**
@@ -240,7 +237,6 @@ public class FrmOpções extends javax.swing.JFrame {
     private javax.swing.JButton CadastrarEmprestimo;
     private javax.swing.JButton CadastrarFerramenta;
     private javax.swing.JButton Emprestimos;
-    private javax.swing.JLabel Fundo;
     private javax.swing.JLabel NomeApp;
     private javax.swing.JButton Relatorio;
     private javax.swing.JButton Sobre;

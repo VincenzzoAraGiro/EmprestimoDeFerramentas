@@ -1,18 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package visao;
 
-/**
- *
- * @author Usuario
- */
-public class FrmCadastroFerramenta extends javax.swing.JFrame {
+import javax.swing.JOptionPane;
+import modelo.Ferramenta;
 
-    /**
-     * Creates new form FrmCadastroFerramenta
-     */
+public class FrmCadastroFerramenta extends javax.swing.JFrame {
+    
+    Ferramenta objeto = new Ferramenta();
+    
     public FrmCadastroFerramenta() {
         initComponents();
     }
@@ -32,32 +26,33 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
         JTFMarca = new javax.swing.JTextField();
         JTFCusto = new javax.swing.JTextField();
         JTFNome = new javax.swing.JTextField();
-        JBCancelar = new javax.swing.JButton();
-        JBCadastrar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        Título = new javax.swing.JLabel();
+        SubTítulo = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        JBCancelar1 = new javax.swing.JButton();
+        JBCadastrar = new javax.swing.JButton();
+        JBVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cadastro de Ferramentas");
+        setTitle("Fast Ferramentas - Cadastro de Ferramentas");
+        setMaximumSize(new java.awt.Dimension(2552525, 25525252));
         setMinimumSize(new java.awt.Dimension(483, 380));
-        setPreferredSize(new java.awt.Dimension(483, 380));
+        setPreferredSize(new java.awt.Dimension(483, 350));
         getContentPane().setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setText("Nome");
+        jLabel2.setText("Ferramenta");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(220, 120, 41, 20);
+        jLabel2.setBounds(200, 80, 90, 20);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Marca");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(70, 220, 42, 20);
+        jLabel3.setBounds(70, 180, 42, 20);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Custo");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(350, 220, 37, 20);
+        jLabel4.setBounds(350, 180, 37, 20);
 
         JTFMarca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,7 +60,7 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JTFMarca);
-        JTFMarca.setBounds(6, 249, 179, 22);
+        JTFMarca.setBounds(10, 210, 179, 22);
 
         JTFCusto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,20 +68,30 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JTFCusto);
-        JTFCusto.setBounds(280, 250, 174, 22);
-        getContentPane().add(JTFNome);
-        JTFNome.setBounds(60, 150, 372, 22);
+        JTFCusto.setBounds(280, 210, 174, 22);
 
-        JBCancelar.setText("Voltar");
-        JBCancelar.addActionListener(new java.awt.event.ActionListener() {
+        JTFNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBCancelarActionPerformed(evt);
+                JTFNomeActionPerformed(evt);
             }
         });
-        getContentPane().add(JBCancelar);
-        JBCancelar.setBounds(40, 330, 72, 23);
+        getContentPane().add(JTFNome);
+        JTFNome.setBounds(60, 110, 372, 22);
+
+        Título.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        Título.setText("Fast Ferramentas");
+        getContentPane().add(Título);
+        Título.setBounds(0, -10, 350, 38);
+
+        SubTítulo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        SubTítulo.setText("Cadastro Ferramentas");
+        getContentPane().add(SubTítulo);
+        SubTítulo.setBounds(0, 20, 160, 20);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(0, 50, 480, 10);
 
         JBCadastrar.setBackground(new java.awt.Color(139, 253, 139));
+        JBCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JBCadastrar.setText("Cadastrar");
         JBCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,47 +99,41 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JBCadastrar);
-        JBCadastrar.setBounds(370, 330, 80, 23);
+        JBCadastrar.setBounds(310, 290, 110, 27);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("Cadastro de Ferramentas");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(130, 10, 242, 25);
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(0, 92, 480, 10);
-
-        JBCancelar1.setBackground(new java.awt.Color(255, 91, 91));
-        JBCancelar1.setText("Apagar");
-        JBCancelar1.addActionListener(new java.awt.event.ActionListener() {
+        JBVoltar.setBackground(new java.awt.Color(255, 91, 91));
+        JBVoltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBVoltar.setText("Voltar");
+        JBVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBCancelar1ActionPerformed(evt);
+                JBVoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(JBCancelar1);
-        JBCancelar1.setBounds(200, 330, 72, 23);
+        getContentPane().add(JBVoltar);
+        JBVoltar.setBounds(40, 290, 100, 27);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void JTFMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFMarcaActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_JTFMarcaActionPerformed
 
     private void JTFCustoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFCustoActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_JTFCustoActionPerformed
 
-    private void JBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCancelarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JBCancelarActionPerformed
-
-    private void JBCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCancelar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JBCancelar1ActionPerformed
+    private void JBVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBVoltarActionPerformed
+        (this).setVisible(false);
+    }//GEN-LAST:event_JBVoltarActionPerformed
 
     private void JBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_JBCadastrarActionPerformed
+
+    private void JTFNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFNomeActionPerformed
+
+    }//GEN-LAST:event_JTFNomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,12 +172,12 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBCadastrar;
-    private javax.swing.JButton JBCancelar;
-    private javax.swing.JButton JBCancelar1;
+    private javax.swing.JButton JBVoltar;
     private javax.swing.JTextField JTFCusto;
     private javax.swing.JTextField JTFMarca;
     private javax.swing.JTextField JTFNome;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel SubTítulo;
+    private javax.swing.JLabel Título;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

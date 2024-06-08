@@ -29,20 +29,10 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         Opções = new javax.swing.JButton();
         NomeApp = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        Background = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        JMenuOpções = new javax.swing.JMenu();
-        JMenuItemCadastoAmigo = new javax.swing.JMenuItem();
-        JMenuItemCadastroFerramenta = new javax.swing.JMenuItem();
-        JMenuItemGerenciarEmprestimos = new javax.swing.JMenuItem();
-        JMenuItemGerenciarAmigos = new javax.swing.JMenuItem();
-        JMenuItemGerenciarFerramentas = new javax.swing.JMenuItem();
-        JMenuItemSair = new javax.swing.JMenuItem();
-        JMenuSobre = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Menu Principal");
-        setMinimumSize(new java.awt.Dimension(500, 300));
+        setMinimumSize(new java.awt.Dimension(483, 350));
         getContentPane().setLayout(null);
 
         Opções.setBackground(new java.awt.Color(153, 255, 101));
@@ -54,69 +44,24 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Opções);
-        Opções.setBounds(170, 180, 120, 30);
+        Opções.setBounds(170, 230, 120, 30);
 
         NomeApp.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
         NomeApp.setText("Fast Ferramentas App");
         getContentPane().add(NomeApp);
-        NomeApp.setBounds(50, 40, 500, 50);
+        NomeApp.setBounds(50, 80, 500, 50);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("O aplicativo que foi criado pra você!");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(110, 90, 280, 20);
-
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo2.jpg"))); // NOI18N
-        Background.setMaximumSize(new java.awt.Dimension(483, 350));
-        Background.setMinimumSize(new java.awt.Dimension(483, 350));
-        getContentPane().add(Background);
-        Background.setBounds(0, -550, 980, 970);
-
-        jMenuBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        JMenuOpções.setText("Opções");
-        JMenuOpções.setToolTipText("");
-
-        JMenuItemCadastoAmigo.setText("Cadastrar Amigo");
-        JMenuItemCadastoAmigo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JMenuItemCadastoAmigoActionPerformed(evt);
-            }
-        });
-        JMenuOpções.add(JMenuItemCadastoAmigo);
-
-        JMenuItemCadastroFerramenta.setText("Cadastrar Ferramenta");
-        JMenuOpções.add(JMenuItemCadastroFerramenta);
-
-        JMenuItemGerenciarEmprestimos.setText("Gerenciar Empréstimos");
-        JMenuOpções.add(JMenuItemGerenciarEmprestimos);
-
-        JMenuItemGerenciarAmigos.setText("Gerenciar Amigos");
-        JMenuOpções.add(JMenuItemGerenciarAmigos);
-
-        JMenuItemGerenciarFerramentas.setText("Gerenciar Ferramentas");
-        JMenuOpções.add(JMenuItemGerenciarFerramentas);
-
-        JMenuItemSair.setText("Sair");
-        JMenuOpções.add(JMenuItemSair);
-
-        jMenuBar1.add(JMenuOpções);
-
-        JMenuSobre.setText("Sobre");
-        jMenuBar1.add(JMenuSobre);
-
-        setJMenuBar(jMenuBar1);
+        jLabel1.setBounds(110, 130, 280, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JMenuItemCadastoAmigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMenuItemCadastoAmigoActionPerformed
-
-    }//GEN-LAST:event_JMenuItemCadastoAmigoActionPerformed
-
     private void OpçõesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpçõesActionPerformed
         // Intancia a tela menu principal
-        FrmMenuPrincipal objeto = new FrmMenuPrincipal();
+        FrmOpções objeto = new FrmOpções();
         objeto.setVisible(true);
     }//GEN-LAST:event_OpçõesActionPerformed
 
@@ -156,18 +101,8 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Background;
-    private javax.swing.JMenuItem JMenuItemCadastoAmigo;
-    private javax.swing.JMenuItem JMenuItemCadastroFerramenta;
-    private javax.swing.JMenuItem JMenuItemGerenciarAmigos;
-    private javax.swing.JMenuItem JMenuItemGerenciarEmprestimos;
-    private javax.swing.JMenuItem JMenuItemGerenciarFerramentas;
-    private javax.swing.JMenuItem JMenuItemSair;
-    private javax.swing.JMenu JMenuOpções;
-    private javax.swing.JMenu JMenuSobre;
     private javax.swing.JLabel NomeApp;
     private javax.swing.JButton Opções;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }
