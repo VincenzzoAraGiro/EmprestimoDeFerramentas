@@ -62,8 +62,8 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
         getContentPane().add(JTFNome);
         JTFNome.setBounds(180, 180, 255, 22);
 
-        JBVoltar.setBackground(new java.awt.Color(255, 102, 102));
         JBVoltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBVoltar.setForeground(new java.awt.Color(0, 0, 255));
         JBVoltar.setText("Voltar");
         JBVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,8 +73,8 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
         getContentPane().add(JBVoltar);
         JBVoltar.setBounds(90, 380, 100, 27);
 
-        JBCadastrar.setBackground(new java.awt.Color(139, 253, 139));
         JBCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBCadastrar.setForeground(new java.awt.Color(0, 153, 0));
         JBCadastrar.setText("Cadastrar");
         JBCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

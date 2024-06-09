@@ -14,47 +14,30 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        JTFMarca = new javax.swing.JTextField();
         JTFCusto = new javax.swing.JTextField();
-        JTFNome = new javax.swing.JTextField();
-        Título = new javax.swing.JLabel();
-        SubTítulo = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         JBCadastrar = new javax.swing.JButton();
         JBVoltar = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        Título = new javax.swing.JLabel();
+        SubTítulo = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        JTFNome = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        JTFMarca = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Fast Ferramentas - Cadastro de Ferramentas");
         setMaximumSize(new java.awt.Dimension(2552525, 25525252));
-        setMinimumSize(new java.awt.Dimension(483, 380));
+        setMinimumSize(new java.awt.Dimension(550, 300));
         setPreferredSize(new java.awt.Dimension(483, 350));
         getContentPane().setLayout(null);
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setText("Ferramenta");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(200, 80, 90, 20);
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Marca");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(70, 180, 42, 20);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Custo");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(350, 180, 37, 20);
-
-        JTFMarca.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTFMarcaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(JTFMarca);
-        JTFMarca.setBounds(10, 210, 179, 22);
+        jLabel4.setBounds(400, 130, 37, 20);
 
         JTFCusto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,30 +45,10 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JTFCusto);
-        JTFCusto.setBounds(280, 210, 174, 22);
+        JTFCusto.setBounds(400, 160, 100, 22);
 
-        JTFNome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTFNomeActionPerformed(evt);
-            }
-        });
-        getContentPane().add(JTFNome);
-        JTFNome.setBounds(60, 110, 372, 22);
-
-        Título.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        Título.setText("Fast Ferramentas");
-        getContentPane().add(Título);
-        Título.setBounds(0, -10, 350, 38);
-
-        SubTítulo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        SubTítulo.setText("Cadastro Ferramentas");
-        getContentPane().add(SubTítulo);
-        SubTítulo.setBounds(0, 20, 160, 20);
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(0, 50, 480, 10);
-
-        JBCadastrar.setBackground(new java.awt.Color(139, 253, 139));
         JBCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBCadastrar.setForeground(new java.awt.Color(0, 153, 51));
         JBCadastrar.setText("Cadastrar");
         JBCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,10 +56,10 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JBCadastrar);
-        JBCadastrar.setBounds(310, 290, 110, 27);
+        JBCadastrar.setBounds(320, 210, 110, 27);
 
-        JBVoltar.setBackground(new java.awt.Color(255, 91, 91));
         JBVoltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBVoltar.setForeground(new java.awt.Color(0, 0, 255));
         JBVoltar.setText("Voltar");
         JBVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,7 +67,57 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JBVoltar);
-        JBVoltar.setBounds(40, 290, 100, 27);
+        JBVoltar.setBounds(80, 210, 100, 27);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel1.setLayout(null);
+
+        Título.setFont(new java.awt.Font("MV Boli", 1, 28)); // NOI18N
+        Título.setText("Fast Ferramentas");
+        jPanel1.add(Título);
+        Título.setBounds(120, 0, 260, 38);
+
+        SubTítulo.setFont(new java.awt.Font("MV Boli", 1, 14)); // NOI18N
+        SubTítulo.setText("Cadastro de Ferramentas");
+        jPanel1.add(SubTítulo);
+        SubTítulo.setBounds(150, 30, 190, 23);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(10, 10, 490, 50);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel2.setLayout(null);
+
+        JTFNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTFNomeActionPerformed(evt);
+            }
+        });
+        jPanel2.add(JTFNome);
+        JTFNome.setBounds(10, 60, 180, 22);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setText("Ferramenta");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(10, 30, 90, 20);
+
+        JTFMarca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTFMarcaActionPerformed(evt);
+            }
+        });
+        jPanel2.add(JTFMarca);
+        JTFMarca.setBounds(200, 60, 179, 22);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setText("Marca");
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(200, 30, 42, 20);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(10, 100, 500, 160);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -222,6 +235,7 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -99,8 +99,8 @@ public class FrmOpções extends javax.swing.JFrame {
         getContentPane().add(Emprestimos);
         Emprestimos.setBounds(270, 190, 152, 23);
 
-        Voltar.setBackground(new java.awt.Color(255, 102, 102));
         Voltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Voltar.setForeground(new java.awt.Color(0, 0, 255));
         Voltar.setText("Voltar");
         Voltar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Voltar.addActionListener(new java.awt.event.ActionListener() {
@@ -186,7 +186,7 @@ public class FrmOpções extends javax.swing.JFrame {
 
     private void RelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RelatorioActionPerformed
         // Torna a tela de relatórios visível
-        FrmRelatorio objeto = new FrmRelatorio();
+        FrmRelatorioFerramentas objeto = new FrmRelatorioFerramentas();
         objeto.setVisible(true);
     }//GEN-LAST:event_RelatorioActionPerformed
 

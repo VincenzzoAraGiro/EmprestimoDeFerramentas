@@ -23,8 +23,8 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(483, 350));
         getContentPane().setLayout(null);
 
-        Opções.setBackground(new java.awt.Color(153, 255, 101));
         Opções.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Opções.setForeground(new java.awt.Color(0, 153, 0));
         Opções.setText("Opções");
         Opções.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -45,8 +45,8 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(110, 130, 280, 23);
 
-        jButton1.setBackground(new java.awt.Color(255, 102, 102));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 255));
         jButton1.setText("Voltar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

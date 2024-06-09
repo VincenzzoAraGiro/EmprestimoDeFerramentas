@@ -48,8 +48,8 @@ public class FrmGerenciaFerramenta extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(483, 380));
         getContentPane().setLayout(null);
 
-        JBVoltar.setBackground(new java.awt.Color(255, 102, 102));
         JBVoltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBVoltar.setForeground(new java.awt.Color(0, 0, 255));
         JBVoltar.setText("Voltar");
         JBVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,8 +59,8 @@ public class FrmGerenciaFerramenta extends javax.swing.JFrame {
         getContentPane().add(JBVoltar);
         JBVoltar.setBounds(50, 470, 80, 27);
 
-        JBApagar.setBackground(new java.awt.Color(153, 255, 255));
         JBApagar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBApagar.setForeground(new java.awt.Color(255, 0, 0));
         JBApagar.setText("Apagar");
         JBApagar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,8 +70,8 @@ public class FrmGerenciaFerramenta extends javax.swing.JFrame {
         getContentPane().add(JBApagar);
         JBApagar.setBounds(320, 470, 90, 27);
 
-        JBAlterar.setBackground(new java.awt.Color(153, 255, 153));
         JBAlterar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBAlterar.setForeground(new java.awt.Color(0, 153, 51));
         JBAlterar.setText("Alterar");
         JBAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,7 +79,7 @@ public class FrmGerenciaFerramenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JBAlterar);
-        JBAlterar.setBounds(610, 470, 80, 30);
+        JBAlterar.setBounds(610, 470, 90, 30);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -278,7 +278,49 @@ public class FrmGerenciaFerramenta extends javax.swing.JFrame {
     }//GEN-LAST:event_JBVoltarActionPerformed
 
     private void JBApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBApagarActionPerformed
-        // TODO add your handling code here:
+        try {
+            // validando dados da interface gráfica.
+            int id = 0;
+            if (this.JTableFerramentas.getSelectedRow() == -1) {
+                throw new Mensagem("Primeiro Selecione uma Ferramenta para APAGAR");
+            } else {
+                id = Integer.parseInt(this.JTableFerramentas.getValueAt(this.JTableFerramentas.getSelectedRow(), 0).toString());
+            }
+            
+            // Define os textos dos botões
+            Object[] options = {"Sim", "Não"};
+            int resposta_usuario = JOptionPane.showOptionDialog(
+                    null, 
+                "Tem certeza que deseja APAGAR essa ferramenta ?", 
+                "Confirmação", 
+                JOptionPane.YES_NO_OPTION, 
+                JOptionPane.QUESTION_MESSAGE, 
+                null, 
+                options, 
+                options[0] );          
+            
+            if (resposta_usuario == 0) {// clicou em SIM
+
+                // envia os dados para o Aluno processar
+                if (this.objetoFerramenta.deleteFerramentaBD(id)) {
+
+                    // limpa os campos
+                    this.JTFNome.setText("");
+                    this.JTFMarca.setText("");
+                    this.JTFCusto.setText("");
+                    this.JTFStatus.setText("");
+                    this.JTFID.setText("");
+                    JOptionPane.showMessageDialog(rootPane, "Ferramenta apagada!");
+                }
+            }
+            System.out.println(this.objetoFerramenta.pegarLista().toString());
+
+        } catch (Mensagem erro) {
+            JOptionPane.showMessageDialog(null, erro.getMessage());
+        } finally {
+            // atualiza a tabela.
+            carregaTabela();
+        }
     }//GEN-LAST:event_JBApagarActionPerformed
     public static void main(String args[]) {
     
