@@ -32,53 +32,53 @@ public class FrmSobre extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        Voltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Fast Ferramentas - Sobre");
+        getContentPane().setLayout(null);
 
         jLabel1.setText("Nosso sistema de registro de empréstimo de ferramentas, desenvolvido pelos");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 6, 435, 16);
 
         jLabel2.setText("integrantes Leonardo Ceregatti Benck e Vincenzzo Aravechia Giro, é uma aplicação");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 28, 435, 16);
 
         jLabel3.setText("em Java para simplificar o controle de empréstimos de ferramentas pessoais entre");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 50, 435, 16);
 
         jLabel4.setText("amigos e conhecidos. Este sistema intuitivo e eficaz rastreia adequadamente as");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(0, 72, 435, 16);
 
         jLabel5.setText("ferramentas emprestadas, reduzindo as chances de perdas e promovendo uma");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(0, 94, 435, 16);
 
         jLabel6.setText("gestão organizada.");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 116, 435, 16);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addContainerGap(168, Short.MAX_VALUE))
-        );
+        Voltar.setBackground(new java.awt.Color(255, 102, 102));
+        Voltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Voltar.setText("Voltar");
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Voltar);
+        Voltar.setBounds(170, 240, 100, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
+        (this).setVisible(false);
+    }//GEN-LAST:event_VoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -116,6 +116,7 @@ public class FrmSobre extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Voltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

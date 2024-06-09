@@ -1,94 +1,82 @@
 package modelo;
 
 import dao.AmigoDAO;
-import java.sql.SQLException;
 import java.util.ArrayList;
+import java.sql.SQLException;
 
 public class Amigo {
-    // Atributos
     private int id;
     private String nome;
     private String telefone;
-
-    // Construtor de Objeto Vazio
+     private final AmigoDAO dao;
     public Amigo() {
-        this(0, "", "");
+        this.dao = new AmigoDAO();
     }
 
-    // Construtor de Objeto, com parâmetros
+    public Amigo(String nome, String telefone) {
+         this.dao = new AmigoDAO();
+        this.nome = nome;
+        this.telefone = telefone;
+    }
+    
     public Amigo(int id, String nome, String telefone) {
+        this.dao = new AmigoDAO();
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
     }
 
-    // Métodos GET e SET
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public String getTelefone() {
         return telefone;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-
-    @Override
-    public String toString() {
-        return "Amigo{id=" + id + ", nome=" + nome + ", telefone=" + telefone + '}';
+    
+    //METODOS CONTROLLERS//
+    // retorna o maior ID da nossa base de dados
+        public int maiorID() throws SQLException{
+        return dao.pegaMaiorID();
+    } 
+    public ArrayList pegarLista(){
+        return dao.getMinhaLista();
     }
-
-    // Métodos para uso junto com o DAO simulando a estrutura em camadas para usar com bancos de dados.
-    public ArrayList<Amigo> getMinhaLista() throws SQLException {
-        return AmigoDAO.getMinhaLista();
-    }
-
-    // Cadastra novo Amigo
-    public boolean inserirAmigoDB(String nome, String telefone) throws SQLException {
-        int id = this.maiorID() + 1;
+    
+    public boolean insertAmigo(String nome, String telefone)throws SQLException{
+        int id = this.maiorID()+1;
         Amigo objeto = new Amigo(id, nome, telefone);
-        AmigoDAO.adicionarAmigo(objeto);
+        dao.inserirAmigoBD(objeto);
         return true;
     }
-
-    // Edita um Amigo específico pelo seu campo ID
-    public boolean updateAmigoDB(int id, String nome, String telefone) throws SQLException {
-        Amigo objeto = new Amigo(id, nome, telefone);
-        AmigoDAO.atualizarAmigo(objeto);
-        return true;
+    public boolean updateAmigoBD(String nome, int id, String telefone) {
+    Amigo objeto = new Amigo( id,nome, telefone);
+    dao.atualizarAmigo(objeto);
+    return true;
     }
-
-    // Remove um Amigo específico pelo seu campo ID
-    public boolean deleteAmigoDB(int id) throws SQLException {
-        AmigoDAO.deletarAmigo(id);
-        return true;
+    
+    public boolean deleteAmigoBD(int id) {
+    dao.deletaAmigoBD(id);
+    return true;
     }
-
-    // Carrega dados de um Amigo específico pelo seu Id
-    public Amigo carregaAmigo(int id) throws SQLException {
-        return AmigoDAO.buscarAmigoPorId(id);
-    }
-
-    // Retorna o maior Id da nossa base de dados
-    public int maiorID() throws SQLException {
-        return AmigoDAO.maiorID();
-    }
-
-    public boolean insertAmigo(String nome, String telefone) {
-        throw new UnsupportedOperationException("Não suportado."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
+    public Amigo pegaAmigo(int id){
+        return dao.carregaAmigo(id);
+    }      
 }

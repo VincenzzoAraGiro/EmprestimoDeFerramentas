@@ -1,41 +1,35 @@
-CREATE DATABASE IF NOT EXISTS db_emprestimos;
-
 USE db_emprestimos;
 
-# Cria a tabela Amigo.
-  
-CREATE TABLE Amigo (
-    id_amigo INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100),
-    telefone VARCHAR(20)
-);
-
-# Cria a tabela Ferramenta.
-  
-CREATE TABLE Ferramenta (
+CREATE TABLE IF NOT EXISTS ferramentas (
     id_ferramenta INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100),
-    marca VARCHAR(100),
-    custo_aquisicao DECIMAL(10, 2)
+    nome VARCHAR(255),
+    marca VARCHAR(255),
+    custo_aquisicao DECIMAL(10, 2),
+    INDEX(nome),
+    status BOOLEAN NOT NULL DEFAULT FALSE
 );
 
-# Cria a tabela de Empréstimos.
+CREATE TABLE IF NOT EXISTS amigos (
+    id_amigo INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    telefone VARCHAR(20),
+    INDEX(nome)
+);
 
-CREATE TABLE Emprestimo (
+CREATE TABLE IF NOT EXISTS emprestimos (
     id_emprestimo INT AUTO_INCREMENT PRIMARY KEY,
-    id_amigo INT,
-    id_ferramenta INT,
+	nome_amigo VARCHAR(255) NOT NULL,
+    nome_ferramenta VARCHAR(255) NOT NULL,
     data_emprestimo DATE,
     data_devolucao DATE,
-    FOREIGN KEY (id_amigo) REFERENCES Amigo(id_amigo),
-    FOREIGN KEY (id_ferramenta) REFERENCES Ferramenta(id_ferramenta)
+    status BOOLEAN NOT NULL DEFAULT FALSE,
+    FOREIGN KEY (nome_amigo) REFERENCES amigos(nome),
+    FOREIGN KEY (nome_ferramenta) REFERENCES ferramentas(nome)
 );
 
-# Cria a tabela de Ferramentas que ja foram emprestadas.
-
-CREATE TABLE ferramenta_emprestadas (
+CREATE TABLE ferramentas_emprestadas (
     id_emprestimo INT NOT NULL,
     id_ferramenta INT NOT NULL,
-    FOREIGN KEY (id_emprestimo) REFERENCES emprestimo(id_emprestimo),
-    FOREIGN KEY (id_ferramenta) REFERENCES ferramenta(id_ferramenta)
+    FOREIGN KEY (id_emprestimo) REFERENCES emprestimos(id_emprestimo),
+    FOREIGN KEY (id_ferramenta) REFERENCES ferramentas(id_ferramenta)
 );
