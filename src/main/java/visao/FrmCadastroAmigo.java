@@ -22,29 +22,29 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
         JTFNome = new javax.swing.JTextField();
         JBVoltar = new javax.swing.JButton();
         JBCadastrar = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
-        jSeparator3 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Fast Ferramentas - Cadastro de Amigos");
-        setMinimumSize(new java.awt.Dimension(483, 380));
+        setMinimumSize(new java.awt.Dimension(645, 510));
         getContentPane().setLayout(null);
 
         JLabelNome.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JLabelNome.setText("Nome:");
         getContentPane().add(JLabelNome);
-        JLabelNome.setBounds(40, 59, 50, 20);
+        JLabelNome.setBounds(180, 150, 50, 20);
 
         JLabelTelefone.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JLabelTelefone.setText("Telefone:");
         getContentPane().add(JLabelTelefone);
-        JLabelTelefone.setBounds(40, 175, 70, 20);
+        JLabelTelefone.setBounds(180, 260, 70, 20);
 
-        CadastrarAmigos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        CadastrarAmigos.setFont(new java.awt.Font("MV Boli", 1, 14)); // NOI18N
         CadastrarAmigos.setText("Cadastrar Amigos");
         getContentPane().add(CadastrarAmigos);
-        CadastrarAmigos.setBounds(170, 0, 160, 25);
+        CadastrarAmigos.setBounds(240, 40, 160, 20);
 
         JTFTelefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,7 +52,7 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JTFTelefone);
-        JTFTelefone.setBounds(40, 209, 255, 22);
+        JTFTelefone.setBounds(180, 300, 255, 22);
 
         JTFNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,7 +60,7 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JTFNome);
-        JTFNome.setBounds(40, 93, 255, 22);
+        JTFNome.setBounds(180, 180, 255, 22);
 
         JBVoltar.setBackground(new java.awt.Color(255, 102, 102));
         JBVoltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -71,7 +71,7 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JBVoltar);
-        JBVoltar.setBounds(60, 270, 100, 27);
+        JBVoltar.setBounds(90, 380, 100, 27);
 
         JBCadastrar.setBackground(new java.awt.Color(139, 253, 139));
         JBCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -82,13 +82,22 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JBCadastrar);
-        JBCadastrar.setBounds(330, 270, 110, 27);
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(0, 145, 525, 24);
-        getContentPane().add(jSeparator2);
-        jSeparator2.setBounds(0, 249, 525, 24);
-        getContentPane().add(jSeparator3);
-        jSeparator3.setBounds(0, 29, 525, 24);
+        JBCadastrar.setBounds(440, 380, 110, 27);
+
+        jLabel1.setFont(new java.awt.Font("MV Boli", 1, 28)); // NOI18N
+        jLabel1.setText("Fast Ferramentas");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(180, 10, 270, 46);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(10, 10, 600, 60);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(10, 100, 600, 360);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -183,8 +192,8 @@ try {
     private javax.swing.JLabel JLabelTelefone;
     private javax.swing.JTextField JTFNome;
     private javax.swing.JTextField JTFTelefone;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -15,8 +15,6 @@ public class FrmRelatorio extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         TabelaRelatorios = new javax.swing.JTable();
         Voltar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        labelPago = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         FastFerramentasApp = new javax.swing.JLabel();
         DescriçãoTela = new javax.swing.JLabel();
@@ -66,16 +64,6 @@ public class FrmRelatorio extends javax.swing.JFrame {
         });
         jPanel1.add(Voltar);
         Voltar.setBounds(150, 190, 170, 30);
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setText("Total Pago R$:");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(30, 140, 100, 20);
-
-        labelPago.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labelPago.setText("00,00");
-        jPanel1.add(labelPago);
-        labelPago.setBounds(130, 140, 90, 20);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(10, 100, 460, 240);
@@ -146,11 +134,9 @@ public class FrmRelatorio extends javax.swing.JFrame {
     private javax.swing.JLabel FastFerramentasApp;
     private javax.swing.JTable TabelaRelatorios;
     private javax.swing.JButton Voltar;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel labelPago;
     // End of variables declaration//GEN-END:variables
 }
