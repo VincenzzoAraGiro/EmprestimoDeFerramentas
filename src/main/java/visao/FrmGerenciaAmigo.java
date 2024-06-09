@@ -22,7 +22,7 @@ public class FrmGerenciaAmigo extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
         JTableAmigos = new javax.swing.JTable();
-        JBCancelar = new javax.swing.JButton();
+        JBVoltar = new javax.swing.JButton();
         JBApagar = new javax.swing.JButton();
         JBAlterar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -87,19 +87,19 @@ public class FrmGerenciaAmigo extends javax.swing.JFrame {
         getContentPane().add(jScrollPane2);
         jScrollPane2.setBounds(27, 80, 430, 117);
 
-        JBCancelar.setBackground(new java.awt.Color(255, 102, 102));
-        JBCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        JBCancelar.setText("Cancelar");
-        JBCancelar.addActionListener(new java.awt.event.ActionListener() {
+        JBVoltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBVoltar.setForeground(new java.awt.Color(0, 0, 255));
+        JBVoltar.setText("Voltar");
+        JBVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBCancelarActionPerformed(evt);
+                JBVoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(JBCancelar);
-        JBCancelar.setBounds(26, 303, 90, 30);
+        getContentPane().add(JBVoltar);
+        JBVoltar.setBounds(26, 303, 90, 30);
 
-        JBApagar.setBackground(new java.awt.Color(153, 255, 255));
         JBApagar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBApagar.setForeground(new java.awt.Color(255, 0, 0));
         JBApagar.setText("Apagar");
         JBApagar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,8 +109,8 @@ public class FrmGerenciaAmigo extends javax.swing.JFrame {
         getContentPane().add(JBApagar);
         JBApagar.setBounds(190, 300, 90, 30);
 
-        JBAlterar.setBackground(new java.awt.Color(139, 253, 139));
         JBAlterar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBAlterar.setForeground(new java.awt.Color(0, 153, 51));
         JBAlterar.setText("Alterar");
         JBAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,9 +175,9 @@ public class FrmGerenciaAmigo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFTelefoneActionPerformed
 
-    private void JBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCancelarActionPerformed
+    private void JBVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBVoltarActionPerformed
         (this).setVisible(false);
-    }//GEN-LAST:event_JBCancelarActionPerformed
+    }//GEN-LAST:event_JBVoltarActionPerformed
 
     private void JBApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBApagarActionPerformed
         try {
@@ -315,7 +315,7 @@ public class FrmGerenciaAmigo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBAlterar;
     private javax.swing.JButton JBApagar;
-    private javax.swing.JButton JBCancelar;
+    private javax.swing.JButton JBVoltar;
     private javax.swing.JTextField JTFID;
     private javax.swing.JTextField JTFNome;
     private javax.swing.JTextField JTFTelefone;

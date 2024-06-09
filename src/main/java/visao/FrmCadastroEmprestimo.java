@@ -146,6 +146,7 @@ public class FrmCadastroEmprestimo extends javax.swing.JFrame {
         TítuloPanel.setBounds(10, 10, 800, 60);
 
         FerramentaPanel.setBackground(new java.awt.Color(255, 255, 204));
+        FerramentaPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         FerramentaPanel.setLayout(null);
 
         Ferramenta.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -178,6 +179,7 @@ public class FrmCadastroEmprestimo extends javax.swing.JFrame {
         FerramentaPanel.setBounds(10, 90, 410, 220);
 
         AmigoPanel.setBackground(new java.awt.Color(255, 255, 204));
+        AmigoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         AmigoPanel.setLayout(null);
 
         Amigo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -305,8 +307,8 @@ public class FrmCadastroEmprestimo extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(440, 430, 370, 90);
 
-        Aplicar.setBackground(new java.awt.Color(139, 253, 139));
         Aplicar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Aplicar.setForeground(new java.awt.Color(0, 153, 51));
         Aplicar.setText("Aplicar");
         Aplicar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -314,10 +316,10 @@ public class FrmCadastroEmprestimo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Aplicar);
-        Aplicar.setBounds(480, 540, 120, 23);
+        Aplicar.setBounds(670, 540, 120, 30);
 
-        Voltar.setBackground(new java.awt.Color(255, 91, 91));
         Voltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Voltar.setForeground(new java.awt.Color(0, 0, 255));
         Voltar.setText("Voltar");
         Voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -325,7 +327,7 @@ public class FrmCadastroEmprestimo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Voltar);
-        Voltar.setBounds(680, 540, 110, 27);
+        Voltar.setBounds(470, 540, 110, 27);
 
         QuantidadeDeItensLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         QuantidadeDeItensLabel.setText("Quantidade de Itens:");
