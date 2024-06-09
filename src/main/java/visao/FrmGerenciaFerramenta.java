@@ -31,7 +31,7 @@ public class FrmGerenciaFerramenta extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        JBCancelar = new javax.swing.JButton();
+        JBVoltar = new javax.swing.JButton();
         JBApagar = new javax.swing.JButton();
         JBAlterar = new javax.swing.JButton();
         JTFNome = new javax.swing.JTextField();
@@ -81,25 +81,31 @@ public class FrmGerenciaFerramenta extends javax.swing.JFrame {
 
         jLabel3.setText("Custo");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(340, 120, 31, 16);
+        jLabel3.setBounds(150, 240, 31, 16);
 
-        JBCancelar.setText("Cancelar");
-        getContentPane().add(JBCancelar);
-        JBCancelar.setBounds(47, 259, 76, 23);
+        JBVoltar.setBackground(new java.awt.Color(255, 102, 102));
+        JBVoltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBVoltar.setText("Voltar");
+        getContentPane().add(JBVoltar);
+        JBVoltar.setBounds(50, 330, 80, 27);
 
+        JBApagar.setBackground(new java.awt.Color(153, 255, 255));
+        JBApagar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JBApagar.setText("Apagar");
         getContentPane().add(JBApagar);
-        JBApagar.setBounds(168, 259, 72, 23);
+        JBApagar.setBounds(210, 330, 90, 27);
 
+        JBAlterar.setBackground(new java.awt.Color(153, 255, 153));
+        JBAlterar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JBAlterar.setText("Alterar");
         getContentPane().add(JBAlterar);
-        JBAlterar.setBounds(328, 259, 72, 23);
+        JBAlterar.setBounds(360, 330, 80, 30);
         getContentPane().add(JTFNome);
         JTFNome.setBounds(6, 148, 290, 22);
         getContentPane().add(JTFMarca);
         JTFMarca.setBounds(6, 210, 290, 22);
         getContentPane().add(JTFCusto);
-        JTFCusto.setBounds(340, 140, 130, 22);
+        JTFCusto.setBounds(110, 260, 110, 22);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -142,7 +148,7 @@ public class FrmGerenciaFerramenta extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBAlterar;
     private javax.swing.JButton JBApagar;
-    private javax.swing.JButton JBCancelar;
+    private javax.swing.JButton JBVoltar;
     private javax.swing.JTextField JTFCusto;
     private javax.swing.JTextField JTFMarca;
     private javax.swing.JTextField JTFNome;

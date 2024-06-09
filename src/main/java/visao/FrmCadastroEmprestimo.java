@@ -33,10 +33,11 @@ public class FrmCadastroEmprestimo extends javax.swing.JFrame {
         JBCadastrar = new javax.swing.JButton();
         JTFNome = new javax.swing.JTextField();
         JTFFerramentas = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cadastro de Empréstimos");
+        setTitle("Fast Ferramentas - Cadastro de Empréstimos");
         setMinimumSize(new java.awt.Dimension(483, 380));
         getContentPane().setLayout(null);
 
@@ -44,9 +45,9 @@ public class FrmCadastroEmprestimo extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(16, 80, 33, 16);
 
-        jLabel2.setText("Data de Empréstimo:");
+        jLabel2.setText("Data do Empréstimo:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(320, 30, 120, 16);
+        jLabel2.setBounds(310, 90, 120, 16);
 
         jLabel3.setText("Ferramentas");
         getContentPane().add(jLabel3);
@@ -79,9 +80,15 @@ public class FrmCadastroEmprestimo extends javax.swing.JFrame {
         getContentPane().add(JTFFerramentas);
         JTFFerramentas.setBounds(16, 205, 206, 22);
 
-        jLabel4.setText("Data de Devolução:");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(320, 120, 110, 16);
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        jLabel5.setText("Fast Ferramentas");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(0, 0, 230, 38);
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setText("Cadastro de Empréstimos");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 30, 180, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -137,6 +144,7 @@ public class FrmCadastroEmprestimo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }
