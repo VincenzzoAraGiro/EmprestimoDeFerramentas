@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.awt.AWTEvent;
 
 public class AmigoDAO {
 
@@ -40,8 +41,8 @@ public class AmigoDAO {
         try {
             Connection conexao = ConexaoDB.getConexao();
             if (conexao != null) {
-                Statement conecaozinha = conexao.createStatement();
-                ResultSet resposta = conecaozinha.executeQuery("SELECT * FROM amigos");
+                Statement connecting = conexao.createStatement();
+                ResultSet resposta = connecting.executeQuery("SELECT * FROM amigos");
                 while (resposta.next()) {
                     int id = resposta.getInt("id_amigo");
                     String nome = resposta.getString("nome");
@@ -50,7 +51,7 @@ public class AmigoDAO {
                     Amigo objeto = new Amigo(id, nome, telefone);
                     MinhaLista.add(objeto);
                 }
-                conecaozinha.close();
+                connecting.close();
             }
 
         } catch (SQLException ex) {
@@ -90,7 +91,7 @@ public class AmigoDAO {
         }
         return true;
     }
-
+    
     public boolean atualizarAmigo(Amigo objeto) {
         String sintaxe = "UPDATE amigos SET nome = ?, telefone = ? WHERE id_amigo = ?";
         try {

@@ -9,12 +9,13 @@ public class Amigo {
     private String nome;
     private String telefone;
      private final AmigoDAO dao;
-    public Amigo() {
+    
+     public Amigo() {
         this.dao = new AmigoDAO();
     }
 
     public Amigo(String nome, String telefone) {
-         this.dao = new AmigoDAO();
+        this.dao = new AmigoDAO();
         this.nome = nome;
         this.telefone = telefone;
     }
@@ -78,5 +79,5 @@ public class Amigo {
     
     public Amigo pegaAmigo(int id){
         return dao.carregaAmigo(id);
-    }      
+    }       
 }
