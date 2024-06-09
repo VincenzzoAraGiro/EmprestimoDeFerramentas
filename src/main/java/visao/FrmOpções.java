@@ -26,34 +26,24 @@ public class FrmOpções extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        NomeApp = new javax.swing.JLabel();
-        SubTitulo = new javax.swing.JLabel();
         CadastrarFerramenta = new javax.swing.JButton();
         VerFerramentas = new javax.swing.JButton();
         VerAmigos = new javax.swing.JButton();
         CadastrarAmigo = new javax.swing.JButton();
         CadastrarEmprestimo = new javax.swing.JButton();
         Emprestimos = new javax.swing.JButton();
-        Relatorio = new javax.swing.JButton();
-        Sobre = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
         Voltar = new javax.swing.JButton();
+        BackGround = new javax.swing.JPanel();
+        Relatorio = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        NomeApp = new javax.swing.JLabel();
+        SubTitulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Fast Ferramentas - Menu Inicial");
-        setMinimumSize(new java.awt.Dimension(483, 380));
+        setBackground(new java.awt.Color(255, 255, 204));
+        setMinimumSize(new java.awt.Dimension(500, 420));
         getContentPane().setLayout(null);
-
-        NomeApp.setBackground(new java.awt.Color(0, 0, 0));
-        NomeApp.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        NomeApp.setText("Fast Ferramentas");
-        getContentPane().add(NomeApp);
-        NomeApp.setBounds(0, 0, 240, 38);
-
-        SubTitulo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        SubTitulo.setText("Opções");
-        getContentPane().add(SubTitulo);
-        SubTitulo.setBounds(0, 30, 210, 20);
 
         CadastrarFerramenta.setText("Cadastrar Ferramenta");
         CadastrarFerramenta.addActionListener(new java.awt.event.ActionListener() {
@@ -98,7 +88,7 @@ public class FrmOpções extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CadastrarEmprestimo);
-        CadastrarEmprestimo.setBounds(70, 200, 152, 23);
+        CadastrarEmprestimo.setBounds(70, 190, 152, 23);
 
         Emprestimos.setText("Ver Empréstimos");
         Emprestimos.addActionListener(new java.awt.event.ActionListener() {
@@ -107,27 +97,7 @@ public class FrmOpções extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Emprestimos);
-        Emprestimos.setBounds(270, 200, 152, 23);
-
-        Relatorio.setText("Relatório");
-        Relatorio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RelatorioActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Relatorio);
-        Relatorio.setBounds(70, 240, 152, 23);
-
-        Sobre.setText("Sobre");
-        Sobre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SobreActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Sobre);
-        Sobre.setBounds(270, 240, 152, 23);
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(0, 50, 483, 10);
+        Emprestimos.setBounds(270, 190, 152, 23);
 
         Voltar.setBackground(new java.awt.Color(255, 102, 102));
         Voltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -140,6 +110,40 @@ public class FrmOpções extends javax.swing.JFrame {
         });
         getContentPane().add(Voltar);
         Voltar.setBounds(200, 290, 80, 30);
+
+        BackGround.setBackground(new java.awt.Color(255, 255, 204));
+        BackGround.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        BackGround.setLayout(null);
+
+        Relatorio.setText("Relatório");
+        Relatorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RelatorioActionPerformed(evt);
+            }
+        });
+        BackGround.add(Relatorio);
+        Relatorio.setBounds(160, 170, 152, 23);
+
+        getContentPane().add(BackGround);
+        BackGround.setBounds(10, 70, 460, 270);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel1.setLayout(null);
+
+        NomeApp.setBackground(new java.awt.Color(0, 0, 0));
+        NomeApp.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        NomeApp.setText("Fast Ferramentas");
+        jPanel1.add(NomeApp);
+        NomeApp.setBounds(130, 0, 240, 30);
+
+        SubTitulo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        SubTitulo.setText("Opções");
+        jPanel1.add(SubTitulo);
+        SubTitulo.setBounds(200, 20, 210, 20);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(10, 10, 460, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -186,12 +190,6 @@ public class FrmOpções extends javax.swing.JFrame {
         objeto.setVisible(true);
     }//GEN-LAST:event_RelatorioActionPerformed
 
-    private void SobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SobreActionPerformed
-        // Torna a tela sobre visível
-        FrmSobre objeto = new FrmSobre();
-        objeto.setVisible(true);
-    }//GEN-LAST:event_SobreActionPerformed
-
     private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
         // Volta para o menu inicial
         (this).setVisible(false);
@@ -233,17 +231,17 @@ public class FrmOpções extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BackGround;
     private javax.swing.JButton CadastrarAmigo;
     private javax.swing.JButton CadastrarEmprestimo;
     private javax.swing.JButton CadastrarFerramenta;
     private javax.swing.JButton Emprestimos;
     private javax.swing.JLabel NomeApp;
     private javax.swing.JButton Relatorio;
-    private javax.swing.JButton Sobre;
     private javax.swing.JLabel SubTitulo;
     private javax.swing.JButton VerAmigos;
     private javax.swing.JButton VerFerramentas;
     private javax.swing.JButton Voltar;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
