@@ -6,6 +6,7 @@ public class Ferramenta {
     private String marca;
     private double custoAquisicao;
 
+    // Construtor com argumentos
     public Ferramenta(int id, String nome, String marca, double custoAquisicao) {
         this.id = id;
         this.nome = nome;
@@ -13,8 +14,9 @@ public class Ferramenta {
         this.custoAquisicao = custoAquisicao;
     }
 
+    // Construtor padrão (sem argumentos)
     public Ferramenta() {
-        throw new UnsupportedOperationException("Não suportado."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this(0, "", "", 0.0);
     }
 
     // Getters e Setters
@@ -53,5 +55,9 @@ public class Ferramenta {
     @Override
     public String toString() {
         return "Ferramenta{id=" + id + ", nome=" + nome + ", marca=" + marca + ", custoAquisicao=" + custoAquisicao + '}';
+    }
+
+    public boolean insertFerramenta(String nome, String marca, double custoAquisicao) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

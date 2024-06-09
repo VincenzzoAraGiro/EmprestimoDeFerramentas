@@ -50,17 +50,17 @@ public class FrmRelatorio extends javax.swing.JFrame {
         TabelaRelatorios.setBackground(new java.awt.Color(248, 242, 242));
         TabelaRelatorios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Relatorios ID", "Ação Feita"
+                "ID do Empréstimo", "Quem Emprestou", "Ferramenta Emprestada"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class
+                java.lang.Object.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -74,6 +74,9 @@ public class FrmRelatorio extends javax.swing.JFrame {
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(0, 210, 500, 60);
 
+        Voltar.setBackground(new java.awt.Color(255, 102, 102));
+        Voltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Voltar.setText("Voltar");
         Voltar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         Voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,7 +84,7 @@ public class FrmRelatorio extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Voltar);
-        Voltar.setBounds(0, 0, 260, 50);
+        Voltar.setBounds(160, 280, 170, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

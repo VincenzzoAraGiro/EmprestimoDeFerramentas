@@ -87,4 +87,8 @@ public class Amigo {
     public int maiorID() throws SQLException {
         return AmigoDAO.maiorID();
     }
+
+    public boolean insertAmigo(String nome, String telefone) {
+        throw new UnsupportedOperationException("Não suportado."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
