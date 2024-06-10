@@ -19,7 +19,7 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Menu Principal");
+        setTitle("Fast Ferramentas - Menu Principal");
         setMinimumSize(new java.awt.Dimension(483, 350));
         getContentPane().setLayout(null);
 
@@ -46,8 +46,8 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         jLabel1.setBounds(110, 130, 280, 23);
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 255));
-        jButton1.setText("Voltar");
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
+        jButton1.setText("Sair");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -85,7 +85,7 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_OpçõesActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        (this).setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

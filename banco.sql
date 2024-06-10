@@ -1,35 +1,21 @@
 USE db_emprestimos;
 
-CREATE TABLE IF NOT EXISTS ferramentas (
-    id_ferramenta INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(255),
-    marca VARCHAR(255),
-    custo_aquisicao DECIMAL(10, 2),
-    INDEX(nome),
-    status BOOLEAN NOT NULL DEFAULT FALSE
-);
+INSERT INTO ferramentas 
+(nome, marca, custo_aquisicao, status) 
+VALUES ('Serra', 'Makita', 499.99, 0), 
+('Furadeira', 'Black in Becker', 456.50, 0);
 
-CREATE TABLE IF NOT EXISTS amigos (
-    id_amigo INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(255) NOT NULL,
-    telefone VARCHAR(20),
-    INDEX(nome)
-);
+INSERT INTO amigos 
+(nome, telefone) 
+VALUES ('Eduardo', '(16) 9834-5562'),
+ ('Maria', '(96) 9995-3220');
 
-CREATE TABLE IF NOT EXISTS emprestimos (
-    id_emprestimo INT AUTO_INCREMENT PRIMARY KEY,
-	nome_amigo VARCHAR(255) NOT NULL,
-    nome_ferramenta VARCHAR(255) NOT NULL,
-    data_emprestimo DATE,
-    data_devolucao DATE,
-    status BOOLEAN NOT NULL DEFAULT FALSE,
-    FOREIGN KEY (nome_amigo) REFERENCES amigos(nome),
-    FOREIGN KEY (nome_ferramenta) REFERENCES ferramentas(nome)
-);
+ INSERT INTO emprestimos 
+(id_amigo, data_emprestimo, data_devolucao, status)
+ VALUES (1, '2024-06-10', '2024-06-23', 1), 
+(2, '2024-06-15', '2024-07-15', 1); 
 
-CREATE TABLE ferramentas_emprestadas (
-    id_emprestimo INT NOT NULL,
-    id_ferramenta INT NOT NULL,
-    FOREIGN KEY (id_emprestimo) REFERENCES emprestimos(id_emprestimo),
-    FOREIGN KEY (id_ferramenta) REFERENCES ferramentas(id_ferramenta)
-);
+INSERT INTO ferramentas_emprestadas 
+(id_emprestimo, id_ferramenta) 
+VALUES 
+(1, 1), (2, 2);

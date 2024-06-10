@@ -50,7 +50,7 @@ public class FrmGerenciaAmigo extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Gerenciamento de Amigos");
+        setTitle("Fast Ferramentas - Gerenciamento de Amigos");
         setMinimumSize(new java.awt.Dimension(483, 380));
         getContentPane().setLayout(null);
 

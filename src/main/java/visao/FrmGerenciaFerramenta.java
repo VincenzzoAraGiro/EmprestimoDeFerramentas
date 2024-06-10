@@ -43,7 +43,7 @@ public class FrmGerenciaFerramenta extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Gerenciamento de Ferramentas");
+        setTitle("Fast Ferramentas - Gerenciamento de Ferramentas");
         setMinimumSize(new java.awt.Dimension(790, 580));
         setPreferredSize(new java.awt.Dimension(483, 380));
         getContentPane().setLayout(null);
