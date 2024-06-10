@@ -80,6 +80,7 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
 
     private void OpçõesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpçõesActionPerformed
         // Intancia a tela menu principal
+        this.setVisible(false);
         FrmOpções objeto = new FrmOpções();
         objeto.setVisible(true);
     }//GEN-LAST:event_OpçõesActionPerformed

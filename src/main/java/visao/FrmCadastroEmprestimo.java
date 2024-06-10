@@ -353,6 +353,8 @@ public class FrmCadastroEmprestimo extends javax.swing.JFrame {
 
     private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
         (this).setVisible(false);
+        FrmOpções objeto = new FrmOpções();
+        objeto.setVisible(true);
     }//GEN-LAST:event_VoltarActionPerformed
 
     private void TableFerramentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TableFerramentasMouseClicked
@@ -494,8 +496,8 @@ public class FrmCadastroEmprestimo extends javax.swing.JFrame {
         this.JTFNome.setText("");
         this.JTFTelefone.setText("");
         this.setVisible(false);
-        FrmGerenciaEmprestimo objeto = new FrmGerenciaEmprestimo();
-        objeto.carregaTabela();
+        FrmOpções objeto = new FrmOpções();
+        objeto.setVisible(true);
     }
     
     public static void main(String args[]) {

@@ -51,7 +51,7 @@ public class FrmRelatorioEmprestimo extends javax.swing.JFrame {
         JTFPreçoTotal.setText(String.valueOf(objetoEmprestimo.calculaTotalEmprestimo()));
         // Assuming there is a method to calculate total price
         System.out.print(objetoEmprestimo.getStatus());
-        LabelStatus.setText(String.valueOf(objetoEmprestimo.getStatus()));
+        LabelDevolvido.setText(String.valueOf(objetoEmprestimo.getStatus()));
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -70,8 +70,9 @@ public class FrmRelatorioEmprestimo extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         Devolver = new javax.swing.JButton();
-        Voltar = new javax.swing.JButton();
+        Gerenciar = new javax.swing.JButton();
         Apagar = new javax.swing.JButton();
+        Voltar = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -89,7 +90,7 @@ public class FrmRelatorioEmprestimo extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         Status = new javax.swing.JLabel();
-        LabelStatus = new javax.swing.JLabel();
+        LabelDevolvido = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -162,16 +163,16 @@ public class FrmRelatorioEmprestimo extends javax.swing.JFrame {
         jPanel3.add(Devolver);
         Devolver.setBounds(690, 10, 100, 30);
 
-        Voltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        Voltar.setForeground(new java.awt.Color(0, 0, 255));
-        Voltar.setText("Voltar");
-        Voltar.addActionListener(new java.awt.event.ActionListener() {
+        Gerenciar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Gerenciar.setForeground(new java.awt.Color(255, 153, 0));
+        Gerenciar.setText("Gerenciar");
+        Gerenciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VoltarActionPerformed(evt);
+                GerenciarActionPerformed(evt);
             }
         });
-        jPanel3.add(Voltar);
-        Voltar.setBounds(490, 10, 90, 30);
+        jPanel3.add(Gerenciar);
+        Gerenciar.setBounds(480, 10, 100, 30);
 
         Apagar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Apagar.setForeground(new java.awt.Color(255, 0, 0));
@@ -183,6 +184,17 @@ public class FrmRelatorioEmprestimo extends javax.swing.JFrame {
         });
         jPanel3.add(Apagar);
         Apagar.setBounds(590, 10, 90, 30);
+
+        Voltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Voltar.setForeground(new java.awt.Color(0, 0, 255));
+        Voltar.setText("Voltar");
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Voltar);
+        Voltar.setBounds(375, 10, 90, 30);
 
         getContentPane().add(jPanel3);
         jPanel3.setBounds(6, 422, 798, 48);
@@ -263,10 +275,10 @@ public class FrmRelatorioEmprestimo extends javax.swing.JFrame {
         jPanel5.add(Status);
         Status.setBounds(210, 190, 60, 25);
 
-        LabelStatus.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        LabelStatus.setText("Status");
-        jPanel5.add(LabelStatus);
-        LabelStatus.setBounds(280, 191, 70, 25);
+        LabelDevolvido.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        LabelDevolvido.setText("Devolvido");
+        jPanel5.add(LabelDevolvido);
+        LabelDevolvido.setBounds(270, 190, 70, 30);
 
         getContentPane().add(jPanel5);
         jPanel5.setBounds(10, 170, 400, 240);
@@ -324,11 +336,11 @@ public class FrmRelatorioEmprestimo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFPreçoTotalActionPerformed
 
-    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
+    private void GerenciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GerenciarActionPerformed
         this.setVisible(false);
         FrmGerenciaFerramenta objeto = new FrmGerenciaFerramenta();
         objeto.setVisible(true);
-    }//GEN-LAST:event_VoltarActionPerformed
+    }//GEN-LAST:event_GerenciarActionPerformed
 
     private void ApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApagarActionPerformed
        int confirm = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja excluir o empréstimo?", "Confirmação", JOptionPane.YES_NO_OPTION);
@@ -355,6 +367,13 @@ public class FrmRelatorioEmprestimo extends javax.swing.JFrame {
         }
     }
     }//GEN-LAST:event_ApagarActionPerformed
+
+    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
+        // Volta para a tela do Menu Opções
+        this.setVisible(false);
+        FrmOpções objeto = new FrmOpções();
+        objeto.setVisible(true);
+    }//GEN-LAST:event_VoltarActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -392,6 +411,7 @@ public class FrmRelatorioEmprestimo extends javax.swing.JFrame {
     private javax.swing.JButton Apagar;
     private javax.swing.JButton Devolver;
     private javax.swing.JTable FerramentasEmprestadasTable;
+    private javax.swing.JButton Gerenciar;
     private javax.swing.JTextField JTFDataEmprestimo;
     private javax.swing.JTextField JTFDevolução;
     private javax.swing.JTextField JTFID;
@@ -400,7 +420,7 @@ public class FrmRelatorioEmprestimo extends javax.swing.JFrame {
     private javax.swing.JTextField JTFPreçoTotal;
     private javax.swing.JTextField JTFQuantidade;
     private javax.swing.JTextField JTFTelefone;
-    private javax.swing.JLabel LabelStatus;
+    private javax.swing.JLabel LabelDevolvido;
     private javax.swing.JLabel Status;
     private javax.swing.JButton Voltar;
     private javax.swing.JLabel jLabel1;

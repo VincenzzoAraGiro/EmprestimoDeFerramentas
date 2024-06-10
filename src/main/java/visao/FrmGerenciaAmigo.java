@@ -177,6 +177,8 @@ public class FrmGerenciaAmigo extends javax.swing.JFrame {
 
     private void JBVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBVoltarActionPerformed
         (this).setVisible(false);
+        FrmOpções objeto = new FrmOpções();
+        objeto.setVisible(true);
     }//GEN-LAST:event_JBVoltarActionPerformed
 
     private void JBApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBApagarActionPerformed

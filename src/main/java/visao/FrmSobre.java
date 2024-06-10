@@ -32,10 +32,12 @@ public class FrmSobre extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         Voltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Fast Ferramentas - Sobre");
+        setMinimumSize(new java.awt.Dimension(460, 190));
         getContentPane().setLayout(null);
 
         jLabel1.setText("Nosso sistema de registro de empréstimo de ferramentas, desenvolvido pelos");
@@ -62,22 +64,31 @@ public class FrmSobre extends javax.swing.JFrame {
         getContentPane().add(jLabel6);
         jLabel6.setBounds(0, 116, 435, 16);
 
-        Voltar.setBackground(new java.awt.Color(255, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jPanel1.setLayout(null);
+
         Voltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Voltar.setForeground(new java.awt.Color(0, 0, 255));
         Voltar.setText("Voltar");
         Voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(Voltar);
-        Voltar.setBounds(170, 240, 100, 30);
+        jPanel1.add(Voltar);
+        Voltar.setBounds(340, 140, 100, 30);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 450, 180);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
         (this).setVisible(false);
+        FrmOpções objeto = new FrmOpções();
+        objeto.setVisible(true);
     }//GEN-LAST:event_VoltarActionPerformed
 
     /**
@@ -123,5 +134,6 @@ public class FrmSobre extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

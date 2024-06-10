@@ -236,6 +236,7 @@ public class FrmRelatorioFerramentas extends javax.swing.JFrame {
 
     private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
         // Volta para a tela de Opções
+        (this).setVisible(false);
         FrmOpções objeto = new FrmOpções();
         objeto.setVisible(true);
     }//GEN-LAST:event_VoltarActionPerformed

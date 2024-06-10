@@ -112,6 +112,8 @@ public class FrmCadastroAmigo extends javax.swing.JFrame {
 
     private void JBVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBVoltarActionPerformed
         (this).setVisible(false);
+        FrmOpções objeto = new FrmOpções();
+        objeto.setVisible(true);
     }//GEN-LAST:event_JBVoltarActionPerformed
 
     private void JBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarActionPerformed
@@ -144,7 +146,10 @@ try {
         }
         // Fecha a janela atual
         this.setVisible(false);
+        FrmOpções objeto = new FrmOpções();
+        objeto.setVisible(true);
     }
+    
 
 } catch (Exception ex) {
     System.out.println("Erro: " + ex.getMessage());

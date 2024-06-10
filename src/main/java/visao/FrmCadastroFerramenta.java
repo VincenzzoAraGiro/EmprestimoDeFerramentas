@@ -132,6 +132,8 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
 
     private void JBVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBVoltarActionPerformed
         (this).setVisible(false);
+        FrmOpções objeto = new FrmOpções();
+        objeto.setVisible(true);
     }//GEN-LAST:event_JBVoltarActionPerformed
 
     private void JBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarActionPerformed
@@ -175,6 +177,8 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
                     this.JTFCusto.setText("");
                 }
                 this.setVisible(false);
+                FrmOpções objeto = new FrmOpções();
+                objeto.setVisible(true);
             }
         } catch (NumberFormatException ex) {
             System.out.println("Erro de formato de número: " + ex.getMessage());
