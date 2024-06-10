@@ -79,5 +79,9 @@ public class Amigo {
     
     public Amigo pegaAmigo(int id){
         return dao.carregaAmigo(id);
-    }       
+    }  
+    
+        public boolean amigoPossuiEmprestimo(int id){
+        return dao.possuiEmprestimo(id);
+    }
 }

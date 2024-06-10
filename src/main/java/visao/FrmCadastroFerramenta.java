@@ -3,9 +3,9 @@ import javax.swing.JOptionPane;
 import modelo.Ferramenta;
 
 public class FrmCadastroFerramenta extends javax.swing.JFrame {
-    
+     // Cria um objeto do tipo Ferramenta
     Ferramenta objeto = new Ferramenta();
-    
+    // Construtor da classe FrmCadastroFerramenta
     public FrmCadastroFerramenta() {
         initComponents();
     }
@@ -131,12 +131,14 @@ public class FrmCadastroFerramenta extends javax.swing.JFrame {
     }//GEN-LAST:event_JTFCustoActionPerformed
 
     private void JBVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBVoltarActionPerformed
+        // Configuração do botão "Voltar"        
         (this).setVisible(false);
         FrmOpções objeto = new FrmOpções();
         objeto.setVisible(true);
     }//GEN-LAST:event_JBVoltarActionPerformed
 
     private void JBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarActionPerformed
+        // Configuração do botão "Cadastrar"
         String nome = "";
         String marca = "";
         double custoAquisicao = 0.0;
