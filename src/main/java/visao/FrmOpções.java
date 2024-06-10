@@ -35,6 +35,7 @@ public class FrmOpções extends javax.swing.JFrame {
         Voltar = new javax.swing.JButton();
         BackGround = new javax.swing.JPanel();
         Relatorio = new javax.swing.JButton();
+        Relatorio1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         NomeApp = new javax.swing.JLabel();
         SubTitulo = new javax.swing.JLabel();
@@ -115,14 +116,23 @@ public class FrmOpções extends javax.swing.JFrame {
         BackGround.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         BackGround.setLayout(null);
 
-        Relatorio.setText("Relatório");
+        Relatorio.setText("Relatório Empréstimos");
         Relatorio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RelatorioActionPerformed(evt);
             }
         });
         BackGround.add(Relatorio);
-        Relatorio.setBounds(160, 170, 152, 23);
+        Relatorio.setBounds(260, 160, 152, 23);
+
+        Relatorio1.setText("Relatório Ferramentas");
+        Relatorio1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Relatorio1ActionPerformed(evt);
+            }
+        });
+        BackGround.add(Relatorio1);
+        Relatorio1.setBounds(60, 160, 152, 23);
 
         getContentPane().add(BackGround);
         BackGround.setBounds(10, 70, 460, 270);
@@ -186,7 +196,7 @@ public class FrmOpções extends javax.swing.JFrame {
 
     private void RelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RelatorioActionPerformed
         // Torna a tela de relatórios visível
-        FrmRelatorioFerramentas objeto = new FrmRelatorioFerramentas();
+        FrmRelatorioEmprestimo objeto = new FrmRelatorioEmprestimo();
         objeto.setVisible(true);
     }//GEN-LAST:event_RelatorioActionPerformed
 
@@ -194,6 +204,12 @@ public class FrmOpções extends javax.swing.JFrame {
         // Volta para o menu inicial
         (this).setVisible(false);
     }//GEN-LAST:event_VoltarActionPerformed
+
+    private void Relatorio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Relatorio1ActionPerformed
+        // Torna a tela de relatórios visível
+        FrmRelatorioFerramentas objeto = new FrmRelatorioFerramentas();
+        objeto.setVisible(true);
+    }//GEN-LAST:event_Relatorio1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,6 +254,7 @@ public class FrmOpções extends javax.swing.JFrame {
     private javax.swing.JButton Emprestimos;
     private javax.swing.JLabel NomeApp;
     private javax.swing.JButton Relatorio;
+    private javax.swing.JButton Relatorio1;
     private javax.swing.JLabel SubTitulo;
     private javax.swing.JButton VerAmigos;
     private javax.swing.JButton VerFerramentas;
