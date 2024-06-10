@@ -31,7 +31,6 @@ public class FrmOpções extends javax.swing.JFrame {
         VerAmigos = new javax.swing.JButton();
         CadastrarAmigo = new javax.swing.JButton();
         CadastrarEmprestimo = new javax.swing.JButton();
-        Emprestimos = new javax.swing.JButton();
         Voltar = new javax.swing.JButton();
         BackGround = new javax.swing.JPanel();
         Relatorio = new javax.swing.JButton();
@@ -91,15 +90,6 @@ public class FrmOpções extends javax.swing.JFrame {
         getContentPane().add(CadastrarEmprestimo);
         CadastrarEmprestimo.setBounds(70, 190, 152, 23);
 
-        Emprestimos.setText("Ver Empréstimos");
-        Emprestimos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EmprestimosActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Emprestimos);
-        Emprestimos.setBounds(270, 190, 152, 23);
-
         Voltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Voltar.setForeground(new java.awt.Color(0, 0, 255));
         Voltar.setText("Voltar");
@@ -123,7 +113,7 @@ public class FrmOpções extends javax.swing.JFrame {
             }
         });
         BackGround.add(Relatorio);
-        Relatorio.setBounds(260, 160, 152, 23);
+        Relatorio.setBounds(260, 120, 152, 23);
 
         Relatorio1.setText("Relatório Ferramentas");
         Relatorio1.addActionListener(new java.awt.event.ActionListener() {
@@ -132,7 +122,7 @@ public class FrmOpções extends javax.swing.JFrame {
             }
         });
         BackGround.add(Relatorio1);
-        Relatorio1.setBounds(60, 160, 152, 23);
+        Relatorio1.setBounds(160, 160, 152, 23);
 
         getContentPane().add(BackGround);
         BackGround.setBounds(10, 70, 460, 270);
@@ -160,42 +150,42 @@ public class FrmOpções extends javax.swing.JFrame {
 
     private void CadastrarFerramentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastrarFerramentaActionPerformed
         // Torna a tela de ferramenta visível
+        this.setVisible(false);
         FrmCadastroFerramenta objeto = new FrmCadastroFerramenta();
         objeto.setVisible(true);
     }//GEN-LAST:event_CadastrarFerramentaActionPerformed
 
     private void VerFerramentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerFerramentasActionPerformed
         // Torna a tela de gerenciamento de ferramenta visível
+        this.setVisible(false);
         FrmGerenciaFerramenta objeto = new FrmGerenciaFerramenta();
         objeto.setVisible(true);
     }//GEN-LAST:event_VerFerramentasActionPerformed
 
     private void CadastrarAmigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastrarAmigoActionPerformed
         // Torna a tela de amigo visível
+        this.setVisible(false);
         FrmCadastroAmigo objeto = new FrmCadastroAmigo();
         objeto.setVisible(true);
     }//GEN-LAST:event_CadastrarAmigoActionPerformed
 
     private void VerAmigosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerAmigosActionPerformed
         // Torna a tela de gerenciamento de amigos visível
+        this.setVisible(false);
         FrmGerenciaAmigo objeto = new FrmGerenciaAmigo();
         objeto.setVisible(true);
     }//GEN-LAST:event_VerAmigosActionPerformed
 
     private void CadastrarEmprestimoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastrarEmprestimoActionPerformed
         // Torna a tela de empréstimo visível
+        this.setVisible(false);
         FrmCadastroEmprestimo objeto = new FrmCadastroEmprestimo();
         objeto.setVisible(true);
     }//GEN-LAST:event_CadastrarEmprestimoActionPerformed
 
-    private void EmprestimosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmprestimosActionPerformed
-        // Torna a tela de gerenciamento de empréstimos visível
-        FrmGerenciaEmprestimo objeto = new FrmGerenciaEmprestimo();
-        objeto.setVisible(true);
-    }//GEN-LAST:event_EmprestimosActionPerformed
-
     private void RelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RelatorioActionPerformed
         // Torna a tela de relatórios visível
+        this.setVisible(false);
         FrmRelatorioEmprestimo objeto = new FrmRelatorioEmprestimo();
         objeto.setVisible(true);
     }//GEN-LAST:event_RelatorioActionPerformed
@@ -203,10 +193,13 @@ public class FrmOpções extends javax.swing.JFrame {
     private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
         // Volta para o menu inicial
         (this).setVisible(false);
+        FrmMenuPrincipal objeto = new FrmMenuPrincipal();
+        objeto.setVisible(true);
     }//GEN-LAST:event_VoltarActionPerformed
 
     private void Relatorio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Relatorio1ActionPerformed
         // Torna a tela de relatórios visível
+        this.setVisible(false);
         FrmRelatorioFerramentas objeto = new FrmRelatorioFerramentas();
         objeto.setVisible(true);
     }//GEN-LAST:event_Relatorio1ActionPerformed
@@ -251,7 +244,6 @@ public class FrmOpções extends javax.swing.JFrame {
     private javax.swing.JButton CadastrarAmigo;
     private javax.swing.JButton CadastrarEmprestimo;
     private javax.swing.JButton CadastrarFerramenta;
-    private javax.swing.JButton Emprestimos;
     private javax.swing.JLabel NomeApp;
     private javax.swing.JButton Relatorio;
     private javax.swing.JButton Relatorio1;
